@@ -10,16 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('cars', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('license_plates');
-            $table->string('image')->nullable();
-            $table->foreignId('category_id')
+        Schema::table('ticket_cars', function (Blueprint $table) {
+            $table->foreignId('seat_ld')
                 ->nullable()
-                ->constrained('categories')
+                ->constrained('seat_positions')
                 ->onDelete('set null');
-            $table->timestamps();
         });
     }
 
@@ -28,6 +23,8 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('cars');
+        Schema::table('ticket_cars', function (Blueprint $table) {
+            $table->dropColumn('seatld');
+        });
     }
 };

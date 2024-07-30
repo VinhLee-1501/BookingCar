@@ -1,4 +1,4 @@
-@extends('components.client.login')
+@extends('layouts.client.app')
 
 @section('content')
     <div class="container-xxl py-5">

@@ -10,14 +10,8 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('districts', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->foreignId('city_id')
-                ->nullable()
-                ->constrained('cities')
-                ->onDelete('set null');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->tinyInteger('role')->default(0)->change();
         });
     }
 
@@ -26,6 +20,8 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('districts');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

@@ -1,4 +1,4 @@
-@extends('components.client.app')
+@extends('layouts.client.app')
 
 @section('meta_title','BeeCar-Trang chủ')
 
