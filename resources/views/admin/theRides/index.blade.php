@@ -1,4 +1,4 @@
-@extends('components.admin.app')
+@extends('layouts.admin.app')
 
 @section('content')
     <div class="card-body">

@@ -1,4 +1,4 @@
-@extends('components.admin.app')
+@extends('layouts.admin.app')
 
 @section('meta_title', 'Trang chủ')
 

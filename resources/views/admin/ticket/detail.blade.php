@@ -1,4 +1,4 @@
-@extends('components.admin.app')
+@extends('layouts.admin.app')
 
 @section('content')
     <div class="card-body">
@@ -28,7 +28,7 @@
                         <td>16h00 - 17/07/2024</td>
                         <td>CX1</td>
                     </tr>
-                    
+
                     </tbody>
                 </table>
                 <a href="{{route('dashboard.addTicket')}}" class="btn btn-success">Thêm +</a>
