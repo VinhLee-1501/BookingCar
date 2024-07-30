@@ -1,7 +1,6 @@
 
 @extends('layouts.client.login')
 
-
 @section('content')
     <div class="container-xxl py-5">
         <!-- Tabs content -->

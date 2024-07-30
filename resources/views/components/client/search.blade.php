@@ -31,6 +31,7 @@
                     </div>
                     <div class="col-md-3">
                         <a href="{{route('user.booking')}}"><button class="btn btn-secondary border-0 w-100 py-3">Tìm chuyến xe</button></a>
+
                     </div>
                 </div>
             </div>
