@@ -30,7 +30,9 @@
                         <input type="date" class="form-control border-0 py-3" placeholder="Chọn ngày đi">
                     </div>
                     <div class="col-md-3">
-                        <button class="btn btn-secondary border-0 w-100 py-3">Tìm chuyến xe</button>
+                        <a href="{{route('user.booking')}}">
+                            <button class="btn btn-secondary border-0 w-100 py-3">Tìm chuyến xe</button>
+                        </a>
                     </div>
                 </div>
             </div>
