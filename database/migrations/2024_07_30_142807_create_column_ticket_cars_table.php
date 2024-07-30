@@ -10,10 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('cities', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('ticket_cars', function (Blueprint $table) {
+            $table->foreignId('seat_ld')
+                ->nullable()
+                ->constrained('seat_positions')
+                ->onDelete('set null');
         });
     }
 
@@ -22,6 +23,8 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('cities');
+        Schema::table('ticket_cars', function (Blueprint $table) {
+            $table->dropColumn('seatld');
+        });
     }
 };

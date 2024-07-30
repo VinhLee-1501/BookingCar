@@ -14,6 +14,7 @@ class DistrictSeeder extends Seeder
      */
     public function run(): void
     {
+
         // Lấy danh sách city_id từ bảng cities
         $cityIds = DB::table('cities')->pluck('id','name')->toArray();
 
