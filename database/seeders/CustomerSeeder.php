@@ -15,7 +15,7 @@ class CustomerSeeder extends Seeder
     {
         Customer::create([
             'name' => 'Admin',
-            'email' => 'admin@gmail.com',
+            'email' => 'admddin@gmail.com',
             'password' => Hash::make('admin123'),
         ]);
     }
