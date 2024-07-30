@@ -26,7 +26,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 'schedule.php',
                 'searchTicket.php',
                 'signin.php',
-                'booking.php'
+                'booking.php',
+                'pay.php'
             ];
 
             foreach ($adminRoute as $route) {
