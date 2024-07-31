@@ -1,4 +1,5 @@
 @extends('layouts.client.app')
+
 @section('content')
     <div class="bg-light">
         <div class="row pt-4">
@@ -17,9 +18,14 @@
                                         <tbody>
                                             <tr class="d-flex items-center gap-1 justify-content-between">
                                                 <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A01</span>
+                                                    <img width="32"src="https://futabus.vn/images/icons/seat_disabled.svg"
+                                                        alt="seat icon">
+                                                    <label class="position-absolute top-50 start-50 translate-middle"
+                                                        for="Aseat1">
+                                                        <span
+                                                            class="position-absolute top-50 start-50 translate-middle">A01</span>
+                                                    </label>
+                                                    <input type="checkbox" value="01" id="Aseat1" hidden>
                                                 </td>
                                                 <td class="w-6"></td>
                                                 <td class="w-6"></td>
@@ -27,110 +33,48 @@
                                                 <td class="position-relative mt-1 d-flex justify-center text-center">
                                                     <img width="32"
                                                         src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute">A02</span>
+                                                        alt="seat icon">
+                                                    <label class="position-absolute top-50 start-50 translate-middle"
+                                                        for="Aseat2">
+                                                        <span
+                                                            class="position-absolute top-50 start-50 translate-middle">A02</span>
+                                                    </label>
+                                                    <input type="checkbox" value="02" id="Aseat2" hidden>
                                                 </td>
                                             </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A03</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A04</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A05</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A06</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">A07</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A08</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A09</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A10</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A11</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">A12</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">A13</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">A14</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">A15</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">A16</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">A17</span>
-                                                </td>
-                                            </tr>
+                                            @for ($row = 0; $row < 6; $row++)
+                                                <tr class="d-flex items-center gap-1 justify-content-between">
+                                                    @for ($col = 0; $col < 3; $col++)
+                                                        @php
+                                                            $seatIndex = $row * 3 + $col + 3;
+                                                            $formattedSeatIndex =
+                                                                'A' . str_pad($seatIndex, 2, '0', STR_PAD_LEFT); // Số ghế chuyền vào checkbox vs label
+                                                        @endphp
+                                                        @if ($seatIndex <= 17)
+                                                            <td
+                                                                class="position-relative mt-1 d-flex justify-content-center text-center">
+                                                                <img src="https://futabus.vn/images/icons/seat_active.svg"
+                                                                    id="aSeat-image-{{ $formattedSeatIndex }}"
+                                                                    alt="seat icon">
+                                                                <label
+                                                                    class="position-absolute top-50 start-50 translate-middle"
+                                                                    for="aSeat{{ $formattedSeatIndex }}">
+                                                                    <p
+                                                                        class="fs-6 text-center position-absolute top-50 start-50 translate-middle">
+                                                                        {{ $formattedSeatIndex }} {{-- Số ghế --}}
+                                                                    </p>
+                                                                    {{-- Số ghế 00 --}}
+                                                                </label>
+                                                                <input class="aSeat-checkbox" type="checkbox"
+                                                                    value="{{ $formattedSeatIndex }}"
+                                                                    id="aSeat{{ $formattedSeatIndex }}" hidden>
+                                                            </td>
+                                                        @else
+                                                            <td class="w-6"></td>
+                                                        @endif
+                                                    @endfor
+                                                </tr>
+                                            @endfor
                                         </tbody>
                                     </table>
                                 </div>
@@ -140,129 +84,63 @@
                                         <tbody>
                                             <tr class="d-flex items-center gap-1 justify-content-between">
                                                 <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B01</span>
+                                                    <img width="32"src="https://futabus.vn/images/icons/seat_disabled.svg"
+                                                        alt="seat icon">
+                                                    <label class="position-absolute top-50 start-50 translate-middle"
+                                                        for="bSeat01">
+                                                        <span
+                                                            class="position-absolute top-50 start-50 translate-middle">B01</span>
+                                                    </label>
+                                                    <input type="checkbox" value="B01" id="bSeat01" hidden>
                                                 </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B02</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B03</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B04</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B05</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
+                                                <td class="w-6"></td>
+                                                <td class="w-6"></td>
+                                                <td class="w-6"></td>
                                                 <td class="position-relative mt-1 d-flex justify-center text-center">
                                                     <img width="32"
                                                         src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">B06</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B07</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_disabled.svg"
-                                                        alt="seat icon"><span class="position-absolute ">B08</span>
+                                                        alt="seat icon">
+                                                    <label class="position-absolute top-50 start-50 translate-middle"
+                                                        for="bSeat02">
+                                                        <span
+                                                            class="position-absolute top-50 start-50 translate-middle">B02</span>
+                                                    </label>
+                                                    <input type="checkbox" value="B02" id="bSeat02" hidden>
                                                 </td>
                                             </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B09</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B10</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B11</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B12</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B13</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B14</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="d-flex items-center gap-1 justify-content-between">
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B15</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B16</span>
-                                                </td>
-                                                <td class="position-relative w-6"></td>
-                                                <td class="position-relative mt-1 d-flex justify-center text-center ">
-                                                    <img width="32"
-                                                        src="https://futabus.vn/images/icons/seat_active.svg"
-                                                        alt="seat icon"><span
-                                                        class="position-absolute fw-bold lg:text-[10px] text-[#339AF4] top-1">B17</span>
-                                                </td>
-                                            </tr>
+                                            @for ($row = 0; $row < 6; $row++)
+                                                <tr class="d-flex items-center gap-1 justify-content-between">
+                                                    @for ($col = 0; $col < 3; $col++)
+                                                        @php
+                                                            $seatIndex = $row * 3 + $col + 3; // Số ghế chuyền vào checkbox vs label
+                                                            $formattedSeatIndex =
+                                                                'B' . str_pad($seatIndex, 2, '0', STR_PAD_LEFT);
+                                                        @endphp
+                                                        @if ($seatIndex <= 17)
+                                                            <td
+                                                                class="position-relative mt-1 d-flex justify-content-center text-center">
+                                                                <img src="https://futabus.vn/images/icons/seat_active.svg"
+                                                                    id="bSeat-image-{{ $formattedSeatIndex }}"
+                                                                    alt="seat icon">
+                                                                <label
+                                                                    class="position-absolute top-50 start-50 translate-middle"
+                                                                    for="bSeat{{ $formattedSeatIndex }}">
+                                                                    <p
+                                                                        class="fs-6 text-center position-absolute top-50 start-50 translate-middle">
+                                                                        {{ $formattedSeatIndex }}
+                                                                    </p>
+                                                                    {{-- Số ghế 00 --}}
+                                                                </label>
+                                                                <input class="bSeat-checkbox" type="checkbox"
+                                                                    value="{{ $seatIndex }}"
+                                                                    id="bSeat{{ $seatIndex }}" hidden>
+                                                            </td>
+                                                        @else
+                                                            <td class="w-6"></td>
+                                                        @endif
+                                                    @endfor
+                                                </tr>
+                                            @endfor
                                         </tbody>
                                     </table>
                                 </div>
@@ -491,4 +369,5 @@
             </div>
         </div>
     </div>
+    <script src="{{ asset('client/js/seatPosition.js') }}"></script>
 @endsection
