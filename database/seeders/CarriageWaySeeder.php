@@ -12,53 +12,42 @@ class CarriageWaySeeder extends Seeder
      */
     public function run(): void
     {
+
+        $carStationIds = DB::table('stations')->pluck('id','name')->toArray();
         DB::table('carriage_ways')->insert([
-            'name' => 'Tuyến Cần Thơ - TP Hồ Chí Minh',
-            'day_of_week' => 4,
-            'trip_of_day' => 1,
-            'average_travel_time' => 4,
-            'distance' => 180,
-            'car_station_id' => 2
-        ]);
-        DB::table('carriage_ways')->insert([
-            'name' => 'Tuyến Cần Thơ - Tiền Giang',
-            'day_of_week' => 4,
-            'trip_of_day' => 1,
-            'average_travel_time' => 4,
-            'distance' => 180,
-            'car_station_id' => 2
-        ]);
-        DB::table('carriage_ways')->insert([
-            'name' => 'Tuyến Cần Thơ - Bến Tre',
-            'day_of_week' => 4,
-            'trip_of_day' => 1,
-            'average_travel_time' => 3,
-            'distance' => 180,
-            'car_station_id' => 2
-        ]);
-        DB::table('carriage_ways')->insert([
-            'name' => 'Tuyến Tiền Giang - TP Hồ Chí Minh',
-            'day_of_week' => 4,
-            'trip_of_day' => 1,
-            'average_travel_time' => 2,
-            'distance' => 180,
-            'car_station_id' => 4
-        ]);
-        DB::table('carriage_ways')->insert([
-            'name' => 'Tuyến Cao Lãnh - TP Hồ Chí Minh',
-            'day_of_week' => 4,
-            'trip_of_day' => 1,
-            'average_travel_time' => 4,
-            'distance' => 180,
-            'car_station_id' => 7
-        ]);
-        DB::table('carriage_ways')->insert([
-            'name' => 'Tuyến Hậu Giang - TP Hồ Chí Minh',
-            'day_of_week' => 4,
-            'trip_of_day' => 1,
-            'average_travel_time' => 4,
-            'distance' => 180,
-            'car_station_id' => 6
+            [
+                'name' => 'Cần Thơ - Vĩnh Long',
+                'day_of_week'=>5,
+                'trip_of_day' =>2,
+                'average_travel_time'=>3,
+                'distance'=>35,
+                'car_station_id' => $carStationIds['Bến xe TT Cần Thơ'] ,
+
+
+            ],
+            [
+                'name' => 'Vĩnh Long - Cần Thơ',
+                'day_of_week'=>5,
+                'trip_of_day' =>2,
+                'average_travel_time'=>3,
+                'distance'=>35,
+                'car_station_is' => $carStationIds['Bến xe TT Vĩnh Long'],
+            ],[
+                'name' => 'Đồng Tháp - Vĩnh Long',
+                'day_of_week'=>5,
+                'trip_of_day' =>2,
+                'average_travel_time'=>3,
+                'distance'=>35,
+                'car_station_is' => $carStationIds['Bến xe TT Đồng Tháp'] ,
+            ],[
+                'name' => 'Hậu Giang - Cần Thơ',
+                'day_of_week'=>5,
+                'trip_of_day' =>2,
+                'average_travel_time'=>3,
+                'distance'=>35,
+                'car_station_is' => $carStationIds['Bến xe TT Hậu Giang'],
+            ],
+>>>>>>> 267a660158d15856a57b7d70deac619dd00f406c
         ]);
     }
 }
