@@ -25,7 +25,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 'news.php',
                 'schedule.php',
                 'searchTicket.php',
-                'signin.php'
+                'signin.php',
+                'seatPosition.php'
             ];
 
             foreach ($adminRoute as $route) {
@@ -41,7 +42,6 @@ return Application::configure(basePath: dirname(__DIR__))
                     ->name('user.')
                     ->group(base_path("routes/client/{$route}"));
             }
-
         },
         web: __DIR__ . '/../routes/web.php',
         commands: __DIR__ . '/../routes/console.php',
