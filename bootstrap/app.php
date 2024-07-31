@@ -26,6 +26,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 'schedule.php',
                 'searchTicket.php',
                 'signin.php',
+                'signup.php',
                 'seatPosition.php'
             ];
 
