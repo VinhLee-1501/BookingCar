@@ -47,7 +47,7 @@ class CarriageWaySeeder extends Seeder
                 'distance'=>35,
                 'car_station_is' => $carStationIds['Bến xe TT Hậu Giang'],
             ],
->>>>>>> 267a660158d15856a57b7d70deac619dd00f406c
+
         ]);
     }
 }

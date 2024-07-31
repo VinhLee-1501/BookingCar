@@ -1,4 +1,3 @@
-
 @extends('layouts.client.login')
 
 @section('content')
