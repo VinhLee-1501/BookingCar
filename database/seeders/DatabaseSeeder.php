@@ -20,6 +20,10 @@ class DatabaseSeeder extends Seeder
             DistrictSeeder::class,
             StationSeeder::class,
             CarriageWaySeeder::class,
+            CarSeeder::class,
+            CategorySeeder::class,
+            TheRidesSeeder::class,
+            SeatPositionSeeder::class
         ]);
     }
 }

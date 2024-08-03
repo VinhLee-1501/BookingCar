@@ -9,6 +9,13 @@ class SeatPosition extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'price',
+        'status',
+        'cars_id'
+    ];
+
     public function car()
     {
         return $this->belongsTo(Car::class, 'car_id');
