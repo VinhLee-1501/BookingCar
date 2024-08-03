@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->float('price');
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default(1);
             $table->foreignId('cars_id')
             ->nullable()
             ->constrained('cars')

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SeatPositionSeeder extends Seeder
 {
@@ -12,6 +13,23 @@ class SeatPositionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('seat_positions')->insert([
+            'name' => 'A09',
+            'price' => 250000,
+            'status' => 1,
+            'cars_id' => 45,
+        ]);
+        DB::table('seat_positions')->insert([
+            'name' => 'B18',
+            'price' => 250000,
+            'status' => 0,
+            'cars_id' => 40,
+        ]);
+        DB::table('seat_positions')->insert([
+            'name' => 'A15',
+            'price' => 250000,
+            'status' => 0,
+            'cars_id' => 36,
+        ]);
     }
 }

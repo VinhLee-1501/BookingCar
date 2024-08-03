@@ -5,7 +5,7 @@
         <h5 class="card-title fw-semibold mb-4">Thêm thông tin xe</h5>
         <div class="card">
             <div class="card-body">
-                <a href="{{ route('dashboard.cars.create')  }}" class="btn btn-success">Thêm +</a>
+                <a href="{{ route('admin/cars/create')  }}" class="btn btn-success">Thêm +</a>
                 <table class="table table-hover">
                     <thead>
                     <tr>

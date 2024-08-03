@@ -58,7 +58,7 @@
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link {{ request()->routeIs('dashboard.theried') ? 'active' : '' }}"
-                       href="{{route('dashboard.theried')}}" aria-expanded="false">
+                       href="{{route('theride.index')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-road"></i>
                 </span>
