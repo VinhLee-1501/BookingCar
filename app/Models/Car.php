@@ -11,7 +11,11 @@ class Car extends Model
     protected $fillable = [
         'name',
         'license_plates',
-        'image',
         'category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }

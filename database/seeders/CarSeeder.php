@@ -14,28 +14,24 @@ class CarSeeder extends Seeder
     public function run(): void
     {
         DB::table('cars')->insert([
-            'name' => "Honda",
+            'name' => "HYUNDAI UNIVERSE",
             'license_plates'=> "51A-724.54",
-            'image' => "https://via.placeholder.com/640x480.png/00aabb?text=facere",
-            'category_id'=> "6"
+            'category_id'=> "1"
         ]);
         DB::table('cars')->insert([
-            'name' => "VinF",
+            'name' => "Universe Advanced",
             'license_plates'=> "51A-541.54",
-            'image' => "https://via.placeholder.com/640x480.png/00aabb?text=facere",
-            'category_id'=> "6"
+            'category_id'=> "2"
         ]);
         DB::table('cars')->insert([
-            'name' => "Tesla",
+            'name' => "Universe Advanced",
             'license_plates'=> "51A-524.34",
-            'image' => "https://via.placeholder.com/640x480.png/00aabb?text=facere",
-            'category_id'=> "8"
+            'category_id'=> "3"
         ]);
         DB::table('cars')->insert([
-            'name' => "Tesla",
+            'name' => "HYUNDAI UNIVERSE",
             'license_plates'=> "51A-225.24",
-            'image' => "https://via.placeholder.com/640x480.png/00aabb?text=facere",
-            'category_id'=> "8"
+            'category_id'=> "4"
         ]);
     }
 }

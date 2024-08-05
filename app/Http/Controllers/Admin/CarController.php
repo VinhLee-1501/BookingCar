@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Car;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -12,7 +14,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        return view('admin.cars.index');
+        $cars = Car::all();
+        return view('admin.cars.index', compact('cars'));
     }
 
     /**
@@ -20,7 +23,8 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('admin.cars.create');
+        $Categories = Category::all();
+        return view('admin.cars.create', compact('Categories'));
     }
 
     /**
@@ -28,7 +32,12 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $car = new Car();
+        $car->name = $request->input('name');
+        $car->license_plates = $request->input('license_plates');
+        $car->category_id = $request->input('category_id');
+        $car->save();
+        return redirect()->back()->with('success', 'Thêm thành công');
     }
 
     /**
@@ -36,7 +45,7 @@ class CarController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -44,15 +53,22 @@ class CarController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.cars.edit');
+        $cars = Car::find($id);
+        $Categories = Category::all();
+        return view('admin.cars.edit',compact('cars','Categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $cars = Car::find($id);
+        $cars->name = $request->input('name');
+        $cars->license_plates = $request->input('license_plates');
+        $cars->category_id = $request->input('category_id');
+        $cars->update();
+        return redirect()->back()->with('success', 'Sửa thành công');
     }
 
     /**
@@ -60,7 +76,9 @@ class CarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cars = Car::find($id);
+        $cars->delete();
+        return redirect()->back()->with('delete','Xóa Thành Công');
     }
 
 }

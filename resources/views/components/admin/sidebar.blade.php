@@ -40,7 +40,7 @@
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link {{ request()->routeIs('dashboard.cars.index') ? 'active' : '' }}"
-                       href="{{ route('dashboard.cars.index')}}" aria-expanded="false">
+                       href="{{ route('car.index')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-bus"></i>
                 </span>
@@ -63,6 +63,16 @@
                   <i class="ti ti-road"></i>
                 </span>
                         <span class="hide-menu">Chuyến xe</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link {{ request()->routeIs('dashboard.seat') ? 'active' : '' }}"
+                       href="{{route('seat.index')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-armchair-2"></i>
+                </span>
+                        <span class="hide-menu">Vị Trí Ghế</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

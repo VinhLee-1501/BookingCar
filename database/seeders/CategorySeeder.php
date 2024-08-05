@@ -15,27 +15,27 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             'name' => "Giường Nằm",
-            'seats' => "1"
+            'seats' => "45"
         ]);
         DB::table('categories')->insert([
             'name' => "Giường Nằm",
-            'seats' => "2"
+            'seats' => "45"
         ]);
         DB::table('categories')->insert([
             'name' => "Giường Nằm",
-            'seats' => "3"
+            'seats' => "45"
         ]);
         DB::table('categories')->insert([
             'name' => "Ghế",
-            'seats' => "1"
+            'seats' => "45"
         ]);
         DB::table('categories')->insert([
             'name' => "Ghế",
-            'seats' => "2"
+            'seats' => "45"
         ]);
         DB::table('categories')->insert([
             'name' => "Ghế",
-            'seats' => "3"
+            'seats' => "45"
         ]);
     }
 }

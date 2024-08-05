@@ -8,10 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SeatPosition extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-        'price',
-        'status',
-        'cars_id'
-    ];
+    protected $fillable = ['name', 'price', 'status', 'cars_id'];
 }

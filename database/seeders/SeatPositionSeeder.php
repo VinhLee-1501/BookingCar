@@ -17,19 +17,19 @@ class SeatPositionSeeder extends Seeder
             'name' => 'A09',
             'price' => 250000,
             'status' => 1,
-            'cars_id' => 45,
+            'cars_id' => 2,
         ]);
         DB::table('seat_positions')->insert([
             'name' => 'B18',
             'price' => 250000,
             'status' => 0,
-            'cars_id' => 40,
+            'cars_id' => 4,
         ]);
         DB::table('seat_positions')->insert([
             'name' => 'A15',
             'price' => 250000,
             'status' => 0,
-            'cars_id' => 36,
+            'cars_id' => 2,
         ]);
     }
 }
