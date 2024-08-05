@@ -8,12 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Car extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'name',
         'license_plates',
-        'image',
-        'category_id',
+        'category_id'
     ];
     public function category()
     {

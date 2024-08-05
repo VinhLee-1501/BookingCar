@@ -10,7 +10,7 @@
                 </h5>
             @endif
             <div class="card-body">
-                <form action="{{ route('theride.update',['id' => $Therides->id])}}" method="post">
+                <form action="{{ route('theride.update',$Therides->id)}}" method="post">
                     @method('patch')
                     @csrf
                     <div class="mb-3">

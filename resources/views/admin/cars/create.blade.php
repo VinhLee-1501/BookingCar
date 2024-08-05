@@ -5,25 +5,31 @@
     <div class="card-body">
         <h5 class="card-title fw-semibold mb-4">Thêm thông tin xe</h5>
         <div class="card">
+            @if(session('success'))
+                <h5 class="alert alert-success">{{session('success')}}
+                </h5>
+            @endif
             <div class="card-body">
-                <form action="" method="post">
+                <form action="{{route('car.store')}}" method="post">
+                    @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Tên xe</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" name="name">
-                        {{--                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>--}}
+                        {{--                        @error('name')--}}
+                        {{--                        <span class="text-danger">{{$messages}}</span>--}}
+                        {{--                        @enderror--}}
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Số xe</label>
                         <input type="text" class="form-control" id="exampleInputPassword1" name="license_plates">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Hình ảnh</label>
-                        <input type="file" class="form-control" id="exampleInputPassword1" name="image">
+
                     </div>
                     <div class="mb-3">
                         <label for="disabledSelect" class="form-label">Loại xe</label>
                         <select id="disabledSelect" class="form-select" name="category_id">
-                            <option>Loại 1</option>
+                            @foreach($Categories as $row)
+                                <option value="{{$row->id}}">{{$row->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Thêm</button>
@@ -31,5 +37,4 @@
             </div>
         </div>
     </div>
-
 @endsection

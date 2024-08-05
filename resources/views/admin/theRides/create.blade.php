@@ -16,7 +16,7 @@
                         <label for="exampleInputEmail1" class="form-label">Tên chuyến</label>
                         <input type="Text" class="form-control" id="exampleInputEmail1" aria-describedby="name"
                                name="name">
-                        {{--                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>--}}
+
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Thời gian</label>
