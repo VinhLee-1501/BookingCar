@@ -73,14 +73,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row d-flex">
+                            <div class="col-md-6 mt-2">
+                                <x-primary-button data-mdb-button-init data-mdb-ripple-init
+                                                  class=" btn btn-primary p-2">
+                                    {{ __('Đăng nhập') }}
+                                </x-primary-button>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{ route('auth.google') }}">
+                                    <img
+                                        src="https://alpineschools.org/wp-content/uploads/2021/08/btn_google_signin_dark_pressed_web@2x.png"
+                                        class=" img-fluid" alt="">
+                                </a>
+                            </div>
+
+                        </div>
 
 
-                        <x-primary-button data-mdb-button-init data-mdb-ripple-init
-                                          class="btn btn-primary btn-block mb-4">
-                            {{ __('Đăng nhập') }}
-                        </x-primary-button>
                         <!-- Register buttons -->
-                        <div class="text-center">
+                        <div class="text-center mt-3">
                             <p>Không có tài khoản? <a href="{{route('signup')}}">Đăng ký</a></p>
                         </div>
                     </form>

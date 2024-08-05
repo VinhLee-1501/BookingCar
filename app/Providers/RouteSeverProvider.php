@@ -34,5 +34,7 @@ class RouteSeverProvider extends ServiceProvider
         // Nạp các route từ tệp auth.php
         Route::middleware('web')
             ->group(base_path('routes/auth.php'));
+
     }
+
 }

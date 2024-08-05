@@ -34,6 +34,21 @@ class StationSeeder extends Seeder
                 'name' => 'Bến xe TT Đồng Tháp',
                 'city_id' => $cityIds['Đồng Tháp'],
             ],
+            [
+
+                'name' => 'Bến xe TP Hồ Chí Minh',
+                'city_id' => $cityIds['TP Hồ Chí Minh'],
+            ],
+            [
+
+                'name' => 'Bến xe TT Cà Mau',
+                'city_id' => $cityIds['Cà Mau'],
+            ],
+            [
+
+                'name' => 'Bến xe TT Bến Tre',
+                'city_id' => $cityIds['Bến Tre'],
+            ],
         ]);
     }
 }

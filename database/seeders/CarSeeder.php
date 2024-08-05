@@ -20,12 +20,22 @@ class CarSeeder extends Seeder
         DB::table('cars')->insert([
             'name' => 'Hyundai Universe Advanced',
             'license_plates' => '65H - 967.76',
-            'category_id' => 4,
+            'category_id' => 3,
         ]);
         DB::table('cars')->insert([
             'name' => 'Hyundai County',
             'license_plates' => '65H - 945.76',
-            'category_id' => 2,
+            'category_id' => 1,
+        ]);
+        DB::table('cars')->insert([
+            'name' => 'Hyundai County',
+            'license_plates' => '65H - 945.26',
+            'category_id' => 4,
+        ]);
+        DB::table('cars')->insert([
+            'name' => 'Hyundai County',
+            'license_plates' => '65H - 945.26',
+            'category_id' => 1,
         ]);
     }
 }

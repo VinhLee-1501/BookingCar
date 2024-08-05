@@ -48,13 +48,7 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">KẾT NỐI CHÚNG TÔI</h5>
                 <p>CÔNG TY CỔ PHẦN XE KHÁCH BEECAR - BEECAR - ĐẶT VÉ XE</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                           placeholder="Nhập email">
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                        Đăng kí
-                    </button>
-                </div>
+
             </div>
         </div>
     </div>

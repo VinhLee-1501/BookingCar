@@ -42,7 +42,7 @@
                     @if ( isset($error) )
                         <p class="text-center text-danger">{{ $error }}</p>
                     @else
-                        <p class="text-start ps-2">Mã vé xe: 0{{ $ticket->id }}</p>
+                        <p class="text-start ps-2">Mã vé xe: 0{{ $ticket->name }}</p>
                         <div class="d-flex justify-around align-items-center col-md-12">
                             <div class="col-md-6">
                                 <table class="table table-borderless">

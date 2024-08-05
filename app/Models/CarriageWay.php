@@ -9,6 +9,21 @@ class CarriageWay extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'day_of_week',
+        'trip_of_day',
+        'average_travel_time',
+        'distance',
+        'car_station_id ',
+
+    ];
+
+    public function station(): HasMany
+    {
+        return $this->hasMany(Station::class, 'car_station_id');
+    }
+
     public function stationsTo()
     {
         return $this->belongsTo(Station::class, 'car_station_to');
