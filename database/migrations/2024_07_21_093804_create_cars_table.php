@@ -14,7 +14,6 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('license_plates');
-            $table->string('image');
             $table->foreignId('category_id')
                 ->nullable()
                 ->constrained('categories')

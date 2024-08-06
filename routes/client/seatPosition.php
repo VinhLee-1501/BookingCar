@@ -2,6 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('seatPosition', function () {
-    return view('client.seatPosition');
-})->name('seatPosition');
+Route::get('seatPosition/{id}', [SeatPositionController::class, 'getSeatPositions'])->name('seatPosition');

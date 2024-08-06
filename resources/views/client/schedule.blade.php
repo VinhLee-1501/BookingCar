@@ -1,4 +1,4 @@
-@extends('components.client.app')
+@extends('layouts.client.app')
 @section('content')
     <div class="container-xxl py-5">
         <div class="container">
@@ -6,12 +6,13 @@
                 <div class="card-body">
                     <table class="table table-borderless">
                         <tbody>
+
                             <tr>
-                                <th style="width:350px; ">Tuyến xe</th>
-                                <th style="width:100px; ">Loại xe</th>
+                                <th style="width:300px; ">Tuyến xe</th>
+                                <th style="width:200px; ">Loại xe</th>
                                 <th style="width:150px; ">Quảng đường</th>
                                 <th style="width:200px; ">Thời gian hành trình</th>
-                                <th>Giá vé</th>
+                                <th style="width:200px; ">Giá vé</th>
                                 <th></th>
                             </tr>
                         </tbody>
@@ -20,49 +21,29 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <div class="overflow-auto bg-body-tertiary" style=" max-height: 150px;">
+
                         <table class="table table-borderless">
                             <tbody>
+                            @foreach ($scheduleData as $schedule)
                                 <tr>
-                                    <th style="width:350px; "><span class="text-primary">TP. Hồ Chí Minh <i
-                                                class="bi bi-arrow-right"></i>
-                                            Cà mau</span>
+                                    <th style="width:300px; "><span class="text-primary">{{ $schedule->name }}</span>
                                     </th>
-                                    <th style="width:100px; ">Giường</th>
-                                    <th style="width:150px; ">639km</th>
-                                    <th style="width:200px; ">11 giờ 30 phút</th>
-                                    <th>---</th>
-                                    <th class="position-relative"><button type="button"
-                                            class="btn btn-outline-primary rounded-pill bottom-0 end-1">Tìm
-                                            chuyến xe</button>
+                                    <th style="width:200px; ">{{ $schedule->category_name}}</th>
+                                    <th style="width:200px; ">{{ $schedule->distance}} km</th>
+                                    <th style="width:150px; ">{{ $schedule->average_travel_time}} giờ</th>
+                                    <th style="width:200px; ">{{ $schedule->price}}.000 đ</th>
+
+                                    <th class="position-relative">
+                                        <a href="{{route('user.ridefilter', ['id' => $schedule->id])}}"
+                                           class="btn btn-outline-primary rounded-pill bottom-0 end-1">
+                                            Tìm chuyến xe
+                                        </a>
                                     </th>
-                                </tr>
-                                <tr>
-                                    <th><span class="text-primary">TP. Hồ Chí Minh <i class="bi bi-arrow-right"></i>
-                                            AnNhơn</span>
-                                    </th>
-                                    <th>Giường</th>
-                                    <th>639km</th>
-                                    <th>11 giờ 30 phút</th>
-                                    <th>---</th>
-                                    <th class="position-relative"><button type="button"
-                                            class="btn btn-outline-primary rounded-pill position-absolute bottom-0 end-1">Tìm
-                                            chuyến xe</button>
-                                </tr>
-                                <tr>
-                                    <th><span class="text-primary">TP. Hồ Chí Minh <i class="bi bi-arrow-right"></i>
-                                            Cần thơ</span>
-                                    </th>
-                                    <th>Giường</th>
-                                    <th>639km</th>
-                                    <th>11 giờ 30 phút</th>
-                                    <th>---</th>
-                                    <th class="position-relative"><button type="button"
-                                            class="btn btn-outline-primary rounded-pill position-absolute bottom-0 end-1">Tìm
-                                            chuyến xe</button>
                                 </tr>
 
+                            @endforeach
                             </tbody>
+
                         </table>
                     </div>
                 </div>

@@ -13,14 +13,10 @@ return new class extends Migration {
         Schema::create('carriage_ways', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->dateTime('day_of_week');
-            $table->dateTime('trip_of_day');
-            $table->dateTime('average_travel_time');
+            $table->integer('day_of_week');
+            $table->integer('trip_of_day');
+            $table->integer('average_travel_time');
             $table->integer('distance');
-            $table->foreignId('car_station_id')
-                ->nullable()
-                ->constrained('stations')
-                ->onDelete('set null');
             $table->timestamps();
         });
     }

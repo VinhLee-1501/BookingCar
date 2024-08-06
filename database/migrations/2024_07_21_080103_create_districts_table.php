@@ -13,6 +13,10 @@ return new class extends Migration {
         Schema::create('districts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('city_id')
+                ->nullable()
+                ->constrained('cities')
+                ->onDelete('set null');
             $table->timestamps();
         });
     }

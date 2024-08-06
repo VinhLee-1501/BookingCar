@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\AddressRequest;
 use App\Models\Address;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class AddressController extends Controller
 {

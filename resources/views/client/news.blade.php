@@ -1,4 +1,4 @@
-@extends('components.client.app')
+@extends('layouts.client.app')
 
 @section('content')
     <!--News Hot  Start -->

@@ -115,6 +115,11 @@
     color: var(--primary);
 }
 
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+
 @media (max-width: 991.98px) {
     .nav-bar {
         margin: 0;
