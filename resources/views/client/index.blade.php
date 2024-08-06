@@ -53,8 +53,8 @@
             <div class=" col-md-12 d-flex p-5">
                 <div class="col-md-4 card m-2 " style="border-radius:15px;">
                     <img alt="" loading="lazy" decoding="async" data-nimg="1"
-                         class="transition-all duration-200 undefined" style="color: transparent;"
-                         src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_2_8bf6ed1d78/Rectangle_23_2_8bf6ed1d78.png">
+                        class="transition-all duration-200 undefined" style="color: transparent;"
+                        src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_2_8bf6ed1d78/Rectangle_23_2_8bf6ed1d78.png">
                     <div class="">
                         <h5 class="p-3">Tuyến xe Tp Hồ Chí Minh</h5>
                         @foreach ($Data['tiketHCMData'] as $tiketHome)
@@ -71,8 +71,8 @@
                 </div>
                 <div class="col-md-4 card m-2" style="border-radius:15px;">
                     <img alt="" loading="lazy" decoding="async" data-nimg="1"
-                         class="transition-all duration-200 undefined" style="color: transparent;"
-                         src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_3_2d8ce855bc/Rectangle_23_3_2d8ce855bc.png">
+                        class="transition-all duration-200 undefined" style="color: transparent;"
+                        src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_3_2d8ce855bc/Rectangle_23_3_2d8ce855bc.png">
                     <div class="max-h-64 overflow-y-auto">
                         <h5 class="p-3">Tuyến xe Vĩnh Long</h5>
                         @foreach ($Data['tiketVLData'] as $ticket)
@@ -89,8 +89,8 @@
                 </div>
                 <div class="col-md-4 card m-2" style="border-radius:15px;">
                     <img alt="" loading="lazy" decoding="async" data-nimg="1"
-                         class="transition-all duration-200 undefined" style="color: transparent;"
-                         src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_2_8bf6ed1d78/Rectangle_23_2_8bf6ed1d78.png">
+                        class="transition-all duration-200 undefined" style="color: transparent;"
+                        src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_2_8bf6ed1d78/Rectangle_23_2_8bf6ed1d78.png">
 
                     <div class="max-h-64 overflow-y-auto">
                         <h5 class="p-3">Tuyến xe Cà Mau</h5>
@@ -129,7 +129,7 @@
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <img class="img-fluid rounded w-100" src="{{ asset('client/img/call-to-action.jpg') }}"
-                                 alt="">
+                                alt="">
                         </div>
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div class="mb-4">
@@ -165,8 +165,7 @@
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h6 class="fw-bold mb-0">PHƯƠNG TRANG - FUTA BUS LINES KHAI TRƯƠNG</h6>
-                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus
-                                    Lines
+                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus Lines
                                     đã
                                     chính thức khai trương tuyến xe mới.</small>
                             </div>
@@ -182,8 +181,7 @@
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h6 class="fw-bold mb-0">PHƯƠNG TRANG - FUTA BUS LINES KHAI TRƯƠNG</h6>
-                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus
-                                    Lines
+                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus Lines
                                     đã
                                     chính thức khai trương tuyến xe mới.</small>
                             </div>
@@ -199,15 +197,13 @@
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h6 class="fw-bold mb-0">PHƯƠNG TRANG - FUTA BUS LINES KHAI TRƯƠNG</h6>
-                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus
-                                    Lines
+                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus Lines
                                     đã
                                     chính thức khai trương tuyến xe mới.</small>
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                </div> <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="{{ route('user.news') }}">
                         <div class="team-item rounded overflow-hidden">
                             <div class="position-relative">
@@ -216,8 +212,7 @@
                             </div>
                             <div class="text-center p-4 mt-3">
                                 <h6 class="fw-bold mb-0">PHƯƠNG TRANG - FUTA BUS LINES KHAI TRƯƠNG</h6>
-                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus
-                                    Lines
+                                <small> Đáp ứng nhu cầu đi lại của quý bà con, ngày 01/07/2024 Phương Trang - FUTA Bus Lines
                                     đã
                                     chính thức khai trương tuyến xe mới.</small>
                             </div>

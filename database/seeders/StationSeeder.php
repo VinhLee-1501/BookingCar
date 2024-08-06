@@ -35,7 +35,7 @@ class StationSeeder extends Seeder
             ],
             [
 
-                'name' => 'Bến xe Quận 8',
+                'name' => 'Bến xe TP Hồ Chí Minh',
                 'city_id' => $cityIds['TP Hồ Chí Minh'],
             ],
             [

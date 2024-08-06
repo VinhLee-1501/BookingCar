@@ -60,22 +60,21 @@
     <!-- Footer Start -->
     <x-Client.Footer></x-Client.Footer>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
 @stack('script')
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ asset('client/lib/wow/wow.min.js') }}"></script>
-<script src="{{ asset('client/lib/easing/easing.min.js') }}"></script>
-<script src="{{ asset('client/lib/waypoints/waypoints.min.js') }}"></script>
-<script src="{{ asset('client/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('client/lib/wow/wow.min.js')}}"></script>
+<script src="{{ asset('client/lib/easing/easing.min.js')}}"></script>
+<script src="{{ asset('client/lib/waypoints/waypoints.min.js')}}"></script>
+<script src="{{ asset('client/lib/owlcarousel/owl.carousel.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+ crossorigin="anonymous"></script>
 <!-- Template Javascript -->
 <script src="{{ asset('client/js/main.js') }}"></script>
 </body>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+
+use Illuminate\Http\Request;
 use App\Models\TheRides;
 
 
@@ -10,6 +12,7 @@ class RideFilterController extends Controller
 {
     public function filterByScheduleId($id)
     {
+
         //     dd($id);
 
         $ridefilterData = TheRides::where('carriage_way_id', '=', $id)
@@ -31,3 +34,5 @@ class RideFilterController extends Controller
         return view('client.rideFilter', compact('ridefilterData'));
     }
 }
+
+  

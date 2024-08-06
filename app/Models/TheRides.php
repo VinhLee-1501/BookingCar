@@ -21,6 +21,7 @@ class TheRides extends Model
         'end_location',
     ];
 
+
     public function carriageWay()
     {
         return $this->belongsTo(CarriageWay::class, 'carriage_way_id');

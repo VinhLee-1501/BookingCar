@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class ProfileController extends Controller
 {
@@ -35,7 +37,7 @@ class ProfileController extends Controller
 
         $users = Auth::User();
         $id = $users->id;
-        $user = User:: find($id);
+        $user = User :: find($id);
         $user->name = $request->name;
         $user->email = $request->email;
         $user->phone = $request->phone;

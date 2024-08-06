@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
-use App\Models\TheRides;
 use Illuminate\Http\Request;
+use App\Models\TheRides;
+
 
 class HomeController extends Controller
 {
@@ -32,6 +33,7 @@ class HomeController extends Controller
             )
             ->where('the_rides.name', 'LIKE', '%' . $name1 . '%')
             ->get();
+
 
 
         $tiketVLData = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
@@ -74,7 +76,6 @@ class HomeController extends Controller
             'tiketVLData' => $tiketVLData,
             'tiketCMData' => $tiketCMData,
         ];
-        // dd($Data[1]);
 
         // dd($tiketHCMData);
         return view('client.index', compact('Data'));

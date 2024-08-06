@@ -17,12 +17,13 @@ class CarriageWaySeeder extends Seeder
         DB::table('carriage_ways')->insert([
             [
                 'name' => 'Cần Thơ - TP Hồ Chí Minh',
-                'day_of_week' => 5,
-                'trip_of_day' => 2,
-                'average_travel_time' => 4,
-                'distance' => 160,
-                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
-                'car_station_from' => $carStationIds['Bến xe Quận 8'],
+                'day_of_week'=>5,
+                'trip_of_day' =>2,
+                'average_travel_time'=>4,
+                'distance'=>160,
+                'car_station_id' => $carStationIds['Bến xe TT Cần Thơ'] ,
+                'car_station_form' => $carStationIds['Bến xe TP Hồ Chí Minh'] ,
+
 
             ],
             [

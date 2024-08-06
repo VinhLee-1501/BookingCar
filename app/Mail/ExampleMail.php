@@ -6,12 +6,13 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+use App\Http\Controllers\Client\ContactController;
+
 class ExampleMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $contactData;
-
 
     /**
      * Create a new message instance.

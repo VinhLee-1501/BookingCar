@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use App\Http\Controllers\Client\RideFilterController;
 
 class RouteSeverProvider extends ServiceProvider
 {
@@ -35,6 +36,6 @@ class RouteSeverProvider extends ServiceProvider
         Route::middleware('web')
             ->group(base_path('routes/auth.php'));
 
-    }
+}
 
 }

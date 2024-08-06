@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+
 use App\Mail\ExampleMail;
 use App\Models\TheRides;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+
 
 class ContactController extends Controller
 {
@@ -46,7 +48,6 @@ class ContactController extends Controller
             'departure_date' => $request->departure_date,
         ];
 
-        dd($contactData);
         // Địa chỉ email quản trị (có thể lấy từ cấu hình .env)
         $adminEmail = env('ADMIN_EMAIL', 'nguyethue1905@gmail.com');
 
