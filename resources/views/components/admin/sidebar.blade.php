@@ -39,8 +39,8 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link {{ request()->routeIs('dashboard.cars.index') ? 'active' : '' }}"
-                       href="{{ route('car.index')}}" aria-expanded="false">
+                    <a class="sidebar-link {{ request()->routeIs('dashboard.car.index') ? 'active' : '' }}"
+                       href="{{ route('dashboard.car.index')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-bus"></i>
                 </span>
@@ -57,8 +57,8 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link {{ request()->routeIs('dashboard.theried') ? 'active' : '' }}"
-                       href="{{ route('dashboard.theride') }}" aria-expanded="false">
+                    <a class="sidebar-link {{ request()->routeIs('dashboard.theried.index') ? 'active' : '' }}"
+                       href="{{ route('dashboard.theride.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-road"></i>
                         </span>
@@ -67,8 +67,8 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link {{ request()->routeIs('dashboard.seat') ? 'active' : '' }}"
-                       href="{{route('seat.index')}}" aria-expanded="false">
+                    <a class="sidebar-link {{ request()->routeIs('dashboard.seatposition') ? 'active' : '' }}"
+                       href="{{ route('dashboard.seatposition')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-armchair-2"></i>
                 </span>
@@ -85,8 +85,8 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link {{ request()->routeIs('dashboard.customer') ? 'active' : '' }}"
-                       href="{{route('dashboard.customer')}}" aria-expanded="false">
+                    <a class="sidebar-link {{ request()->routeIs('dashboard.user') ? 'active' : '' }}"
+                       href="{{ route('dashboard.user')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-users"></i>
                 </span>

@@ -9,7 +9,7 @@
                 <div class="alert alert-success">{{ session('update') }}</div>
             @endif
             <div class="card-body">
-                <form action="{{ route('seat.update', $seat->id) }}" method="post">
+                <form action="{{ route('dashboard.seat.update', $seat->id) }}" method="post">
                     @method('patch')
                     @csrf
                     <div class="row">
@@ -48,7 +48,10 @@
                             <select class="form-select" id="cars_id" name="cars_id">
                                 @foreach($cars as $row)
                                     <option
-                                        value="{{ $row->id }}" {{ old('cars_id', $seat->cars_id) == $row->id ? 'selected' : '' }}>{{ $row->name }}</option>
+                                        value="{{ $row->id }}"
+                                        {{ old('cars_id', $seat->cars_id) == $row->id ? 'selected' : '' }}>
+                                        {{ $row->license_plates }}
+                                    </option>
                                 @endforeach
                             </select>
                             @error('cars_id')

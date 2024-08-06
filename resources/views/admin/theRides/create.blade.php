@@ -10,7 +10,7 @@
                 </h5>
             @endif
             <div class="card-body">
-                <form action="{{ route('theride.create')}}" method="post">
+                <form action="{{ route('dashboard.theride.create')}}" method="post">
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Tên chuyến</label>

@@ -10,7 +10,7 @@
                 </h5>
             @endif
             <div class="card-body">
-                <form action="{{route('car.update', $cars->id)}}" method="post">
+                <form action="{{route('dashboard.car.update', $cars->id)}}" method="post">
                     @method('patch')
                     @csrf
                     <div class="mb-3">

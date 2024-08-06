@@ -9,7 +9,7 @@
                 </h5>
             @endif
             <div class="card-body">
-                <a href="{{route('seat.create')}}" class="btn btn-success">Thêm +</a>
+                <a href="{{route('dashboard.seat.create')}}" class="btn btn-success">Thêm +</a>
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -33,8 +33,9 @@
                             </td>
                             <td>{{$row->cars_id}}</td>
                             <td class="d-flex">
-                                <a href="{{route('seat.edit', $row->id)}}" class="btn btn-primary btn-sm me-2">Sửa</a>
-                                <form action="{{ route('seat.destroy', $row->id) }}" method="post">
+                                <a href="{{route('dashboard.seat.edit', $row->id)}}"
+                                   class="btn btn-primary btn-sm me-2">Sửa</a>
+                                <form action="{{ route('dashboard.seat.destroy', $row->id) }}" method="post">
                                     @method('delete')
                                     @csrf
                                     <button class="btn btn-danger btn-sm ">Xóa</button>

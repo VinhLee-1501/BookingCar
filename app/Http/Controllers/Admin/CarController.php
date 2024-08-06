@@ -14,7 +14,9 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
+        $cars = Car::join('categories', 'cars.category_id', '=', 'categories.id')
+            ->select('cars.id', 'cars.name', 'cars.license_plates', 'categories.name as category_name')
+            ->get();
         return view('admin.cars.index', compact('cars'));
     }
 

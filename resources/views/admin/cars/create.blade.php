@@ -10,7 +10,7 @@
                 </h5>
             @endif
             <div class="card-body">
-                <form action="{{route('car.store')}}" method="post">
+                <form action="{{route('dashboard.car.store')}}" method="post">
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Tên xe</label>

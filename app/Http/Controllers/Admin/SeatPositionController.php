@@ -7,7 +7,7 @@ use App\Http\Requests\SeatPositionRequest\SeatPositionRequest;
 use App\Models\Car;
 use App\Models\SeatPosition;
 
-class Seat_positions extends Controller
+class SeatPositionController extends Controller
 {
     public function index()
     {

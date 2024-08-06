@@ -9,7 +9,7 @@
                 <div class="alert alert-success">{{ session('add') }}</div>
             @endif
             <div class="card-body">
-                <form action="{{ route('seat.store') }}" method="post">
+                <form action="{{ route('dashboard.seat.store') }}" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-lg-6 mb-3">

@@ -9,7 +9,7 @@
                 </h5>
             @endif
             <div class="card-body">
-                <a href="{{route('theride.create')}}" class="btn btn-success">Thêm +</a>
+                <a href="{{route('dashboard.theride.create')}}" class="btn btn-success">Thêm +</a>
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -34,9 +34,10 @@
                             <td>{{$row->price}}</td>
                             {{--                            <td>{{$row->id}}</td>--}}
                             <td>
-                                <a href="{{ route('theride.edit', ['id' => $row->id]) }}"
+                                <a href="{{ route('dashboard.theride.edit', ['id' => $row->id]) }}"
                                    class="btn btn-primary btn-sm">Sửa</a>
-                                <form action="{{ route('theride.destroy', ['id' => $row->id]) }}" method="post">
+                                <form action="{{ route('dashboard.theride.destroy', ['id' => $row->id]) }}"
+                                      method="post">
                                     @method('delete')
                                     @csrf
                                     <button class="btn btn-danger btn-sm">Xóa</button>

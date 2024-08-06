@@ -16,7 +16,9 @@ class TheRides extends Model
         'estimated_departure_time',
         'price',
         'carriage_way_id',
-        'car_id'
+        'car_id',
+        'start_location',
+        'end_location',
     ];
 
     public function carriageWay()

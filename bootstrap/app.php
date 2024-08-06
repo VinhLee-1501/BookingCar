@@ -15,7 +15,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 'carriageway.php',
                 'theried.php',
                 'ticket.php',
-                'user.php'
+                'user.php',
+                'seatposition.php'
             ];
 
             $clientRoute = [
