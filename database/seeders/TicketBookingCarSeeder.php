@@ -30,7 +30,7 @@ class TicketBookingCarSeeder extends Seeder
             'day_founded' => Carbon::now()->format('Y-m-d H:i:s'),
             'status' => 1,
             'prepayment' => 165.000,
-            'user_id' => 2
+            'user_id' => 3
         ]);
     }
 }

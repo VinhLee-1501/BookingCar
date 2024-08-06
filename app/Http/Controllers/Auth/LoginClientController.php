@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
-
 class LoginClientController extends Controller
 {
     /**
@@ -32,7 +31,6 @@ class LoginClientController extends Controller
 
         return redirect()->intended(route('user.home', absolute: false));
     }
-
     /**
      * Destroy an authenticated session.
      */
@@ -47,5 +45,4 @@ class LoginClientController extends Controller
         return redirect(route('user.home', absolute: false));
 
     }
-
 }

@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('ticket_cars', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('seat_ld')
+            ->nullable()
+            ->constrained('seat_positions')
+            ->onDelete('set null');
             $table->foreignId('ticket_booking_id')
             ->nullable()
             ->constrained('ticket_booking_cars')

@@ -16,13 +16,19 @@ class TicketCarSeeder extends Seeder
             'name' => 'V01',
             'seat_ld' => null,
             'ticket_booking_id' => 1,
-            'the_ride_id' => 5
+            'the_ride_id' => 1
         ]);
         DB::table('ticket_cars')->insert([
             'name' => 'V02',
-            'seat_ld' => null,
-            'ticket_booking_id' => 2,
+            'seat_ld' => 4,
+            'ticket_booking_id' =>2,
             'the_ride_id' => 2
+        ]);
+        DB::table('ticket_cars')->insert([
+            'name' => 'V03',
+            'seat_ld' => 3,
+            'ticket_booking_id' => 3,
+            'the_ride_id' => 3
         ]);
     }
 }
