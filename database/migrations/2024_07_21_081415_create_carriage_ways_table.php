@@ -17,10 +17,6 @@ return new class extends Migration {
             $table->integer('trip_of_day');
             $table->integer('average_travel_time');
             $table->integer('distance');
-            $table->foreignId('car_station_id')
-                ->nullable()
-                ->constrained('stations')
-                ->onDelete('set null');
             $table->timestamps();
         });
     }

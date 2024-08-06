@@ -13,19 +13,11 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         DB::table('categories')->insert([
-            'name' => 'Xe khách 24 chỗ',
-            'seats' => 24
+            'name' => 'Giường nằm',
+            'seats' => 45
         ]);
         DB::table('categories')->insert([
-            'name' => 'Xe khách 29 chỗ',
-            'seats' => 29
-        ]);
-        DB::table('categories')->insert([
-            'name' => 'Xe khách 35 chỗ',
-            'seats' => 35
-        ]);
-        DB::table('categories')->insert([
-            'name' => 'Xe khách 45 chỗ',
+            'name' => 'Ghế ngồi',
             'seats' => 45
         ]);
     }

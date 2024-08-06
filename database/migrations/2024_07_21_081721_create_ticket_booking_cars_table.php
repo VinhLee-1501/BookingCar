@@ -15,10 +15,6 @@ return new class extends Migration {
             $table->dateTime('day_founded');
             $table->integer('status');
             $table->float('prepayment');
-            $table->foreignId('customer_id')
-                ->nullable()
-                ->constrained('customers')
-                ->onDelete('set null');
             $table->timestamps();
         });
     }

@@ -17,8 +17,8 @@ class HomeController extends Controller
         $name3 = 'Cà Mau';
 
         $tiketHCMData = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
-            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_id')
-            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_form')
+            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_to')
+            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_from')
             ->select(
                 'the_rides.time_to_go as timeStart',
                 'the_rides.estimated_arrival_time as timeEnd',
@@ -35,8 +35,8 @@ class HomeController extends Controller
 
 
         $tiketVLData = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
-            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_id')
-            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_form')
+            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_to')
+            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_from')
             ->select(
                 'the_rides.time_to_go as timeStart',
                 'the_rides.estimated_arrival_time as timeEnd',
@@ -52,8 +52,8 @@ class HomeController extends Controller
             ->get();
 
         $tiketCMData = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
-            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_id')
-            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_form')
+            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_to')
+            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_from')
             ->select(
                 'the_rides.time_to_go as timeStart',
                 'the_rides.estimated_arrival_time as timeEnd',

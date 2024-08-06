@@ -34,6 +34,10 @@ class DistrictSeeder extends Seeder
                 'name' => 'Ngã Bảy',
                 'city_id' => $cityIds['Hậu Giang'],
             ],
+            [
+                'name' => 'Quận 8',
+                'city_id' => $cityIds['TP Hồ Chí Minh'],
+            ],
         ]);
     }
 }

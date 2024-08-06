@@ -37,63 +37,64 @@
                         <h3 class="">BeeCar</h3>
                     </div>
                 </div>
-                <div class="card-body">
-                    <h3 class="card-text text-center">Vé xe khách</h3>
-                    @if ( isset($error) )
-                        <p class="text-center text-danger">{{ $error }}</p>
-                    @else
-                        <p class="text-start ps-2">Mã vé xe: 0{{ $ticket->name }}</p>
-                        <div class="d-flex justify-around align-items-center col-md-12">
-                            <div class="col-md-6">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                    <tr>
-                                        <td>Họ và tên:</td>
-                                        <td>{{ $ticket->ticketBookingCar->user->name }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Giới tính:</td>
-                                        <td>{{ $ticket->ticketBookingCar->user->gender }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SDT:</td>
-                                        <td>{{ $ticket->ticketBookingCar->user->phone }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Địa chỉ:</td>
-                                        <td>{{ $ticket->ticketBookingCar->user->address }}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                @if ( isset($error) )
+                    <p class="text-center text-danger">{{ $error }}</p>
+                @else
+                    @foreach( $tickets as $ticket)
+                        <div class="card-body">
+                            <h3 class="card-text text-center">Vé xe khách</h3>
+                            <p class="text-start ps-2">Mã vé xe: 0{{ $ticket->name }}</p>
+                            <div class="d-flex justify-around align-items-center col-md-12">
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                        <tr>
+                                            <td>Họ và tên:</td>
+                                            <td>{{ $ticket->user_name }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Giới tính:</td>
+                                            <td>{{ $ticket->gender }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SDT:</td>
+                                            <td>{{ $ticket->phone }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Địa chỉ:</td>
+                                            <td>{{ $ticket->address }}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                        <tr>
+                                            <td>Tuyến đường:</td>
+                                            <td>{{ $ticket->ride_name }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Số ghế:</td>
+                                            <td>{{ $ticket->seat_name }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Số xe:</td>
+                                            <td>{{ $ticket->license_plates  }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thời gian khởi hành:</td>
+                                            <td>{{ Carbon::parse($ticket->time_to_go)->format('d-m-Y H:i') }}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                    <tr>
-                                        <td>Tuyến đường:</td>
-                                        <td>{{ $ticket->theRide->name }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Số ghế:</td>
-                                        <td>{{ $ticket->seat->name }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Số xe:</td>
-                                        <td>{{ $ticket->theRide->car->license_plates  }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Thời gian khởi hành:</td>
-                                        <td>{{ Carbon::parse($ticket->theRide->time_to_go)->format('d-m-Y H:i') }}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <h5 class="text-center text-danger">Giá tiền: {{ number_format($ticket->pre_payment) }}
+                                đ/lượt</h5>
                         </div>
-                        <h5 class="text-center text-danger">Giá tiền: {{ $ticket->ticketBookingCar->prepayment }}.000
-                            đ/lượt</h5>
-                    @endif
-                </div>
-
+                    @endforeach
+                @endif
             </div>
         </div>
 

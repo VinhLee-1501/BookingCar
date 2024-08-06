@@ -14,21 +14,15 @@ class TicketCarSeeder extends Seeder
     {
         DB::table('ticket_cars')->insert([
             'name' => 'V01',
-            'seat_ld' => 2,
+            'seat_ld' => null,
             'ticket_booking_id' => 1,
             'the_ride_id' => 5
         ]);
         DB::table('ticket_cars')->insert([
             'name' => 'V02',
-            'seat_ld' => 2,
+            'seat_ld' => null,
             'ticket_booking_id' => 2,
-            'the_ride_id' => 6
-        ]);
-        DB::table('ticket_cars')->insert([
-            'name' => 'V03',
-            'seat_ld' => 3,
-            'ticket_booking_id' => 8,
-            'the_ride_id' => 6
+            'the_ride_id' => 2
         ]);
     }
 }

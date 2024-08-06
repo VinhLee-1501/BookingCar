@@ -10,7 +10,8 @@ class SeatPositionController extends Controller
 {
     public function getRideData($id)
     {
-        return TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
+//        dd($id);
+        $query = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
             ->join('stations as start_station', 'carriage_ways.car_station_to', '=', 'start_station.id')
             ->join('stations as end_station', 'carriage_ways.car_station_from', '=', 'end_station.id')
             ->join('cities as cityTo', 'start_station.city_id', '=', 'cityTo.id')
@@ -21,8 +22,9 @@ class SeatPositionController extends Controller
             ->join('categories', 'cars.category_id', '=', 'categories.id')
             ->join('seat_positions', 'seat_positions.cars_id', '=', 'cars.id')
             ->select('the_rides.*', 'start_station.name')
-            ->groupBy('the_rides.id')
-            ->find($id);
+            ->where('the_rides.id', $id)
+            ->first();
+        return $query;
     }
 
     public function getSeatPositions($id)
@@ -31,7 +33,7 @@ class SeatPositionController extends Controller
         $seatPositionsB = SeatPosition::where('name', 'like', 'B%')->distinct()->get();
 
         $theRide = $this->getRideData($id);
-//        dd($theRide->carriageWay->name);
+//        dd($theRide);
         return view('client.seatPosition', [
             'seatPositionsA' => $seatPositionsA,
             'seatPositionsB' => $seatPositionsB,

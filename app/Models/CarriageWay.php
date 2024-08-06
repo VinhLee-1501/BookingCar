@@ -15,14 +15,10 @@ class CarriageWay extends Model
         'trip_of_day',
         'average_travel_time',
         'distance',
-        'car_station_id ',
-
+        'car_station_to',
+        'car_station_from'
     ];
 
-    public function station(): HasMany
-    {
-        return $this->hasMany(Station::class, 'car_station_id');
-    }
 
     public function stationsTo()
     {

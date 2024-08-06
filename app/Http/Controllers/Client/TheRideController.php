@@ -17,14 +17,15 @@ class TheRideController extends Controller
 
 //        dd($departureDate);
         $theRide = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
-            ->join('stations', 'carriage_ways.car_station_id', '=', 'stations.id')
+            ->join('stations as stationTo', 'carriage_ways.car_station_to', '=', 'stationTo.id')
+            ->join('stations as stationFrom', 'carriage_ways.car_station_from', '=', 'stationFrom.id')
             ->join('cars', 'the_rides.car_id', '=', 'cars.id')
             ->join('categories', 'cars.category_id', '=', 'categories.id')
             ->join('seat_positions', 'seat_positions.cars_id', '=', 'cars.id')
             ->where('the_rides.start_location', $start)
             ->where('the_rides.end_location', $end)
             ->where('the_rides.time_to_go', 'like', $departureDate . '%')
-            ->select('the_rides.*', 'stations.name')
+            ->select('the_rides.*', 'stationTo.name')
             ->groupBy('the_rides.id')
             ->get();
 

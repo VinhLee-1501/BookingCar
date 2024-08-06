@@ -52,7 +52,7 @@
                     </ul>
                 </div>
             @else
-                <a href="{{ route('user.signin') }}" class="btn btn-primary px-3 d-none d-lg-flex">Đăng
+                <a href="{{ route('signin') }}" class="btn btn-primary px-3 d-none d-lg-flex">Đăng
                     nhập</a>
         @endif
 

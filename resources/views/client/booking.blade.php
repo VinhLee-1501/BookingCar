@@ -111,8 +111,10 @@
                                     {{--                                    </form>--}}
                                     <div class="tab-pane fade show active" id="seat" role="tabpanel"
                                          aria-labelledby="seat-tab">
-                                        <a href="{{ route('user.seatPosition', $item->id) }}" class="btn btn-primary">Chọn
-                                            chuyến</a>
+                                        <form action="{{ route('user.seatPosition', $item->id) }}" method="get">
+                                            @csrf
+                                            <button class="btn btn-primary" type="submit">Chọn chuyến</button>
+                                        </form>
                                     </div>
 
                                     <div class="tab-pane fade" id="schedule" role="tabpanel"

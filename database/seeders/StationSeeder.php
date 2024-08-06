@@ -20,7 +20,6 @@ class StationSeeder extends Seeder
         DB::table('stations')->insert([
             [
                 'name' => 'Bến xe TT Cần Thơ',
-
                 'city_id' => $cityIds['Cần Thơ'] ,
             ],
             [
@@ -36,7 +35,7 @@ class StationSeeder extends Seeder
             ],
             [
 
-                'name' => 'Bến xe TP Hồ Chí Minh',
+                'name' => 'Bến xe Quận 8',
                 'city_id' => $cityIds['TP Hồ Chí Minh'],
             ],
             [

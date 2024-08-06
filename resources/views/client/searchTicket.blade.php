@@ -8,7 +8,11 @@
 
     <div class="p-5 wow fadeInUp col-12 mt-5" data-wow-delay="0.5s">
         <h2 class="mb-3 text-center">Tra cứu thông tin đặt vé</h2>
+        @if(session('error'))
+            <span class="alert alert-danger d-flex justify-center align-items-center">{{ session('error')}}</span>
+        @endif
         <form action="{{ route('user.search') }}" method="get">
+            @method('GET')
             @csrf
             <div class="row g-3">
                 <div class="col-md-4">
@@ -19,7 +23,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="email" placeholder="Nhập mã vé" name="ticket_id">
+                        <input type="text" class="form-control" id="email" placeholder="Nhập mã vé" name="name">
                         <label for="email">Nhập mã vé</label>
                     </div>
                 </div>

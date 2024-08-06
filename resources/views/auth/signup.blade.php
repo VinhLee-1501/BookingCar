@@ -46,7 +46,9 @@
                                           type="password"
                                           name="password"
                                           required autocomplete="new-password"/>
-                            <x-input-error :messages="$errors->get('Vui lòng nhập mật khẩu')" class="mt-2"/>
+                            @error('password')
+                            <x-input-error :messages="$message" class="mt-2"/>
+                            @enderror
                         </div>
 
                         <!--Confirm Password -->
@@ -56,7 +58,9 @@
                             <x-text-input id="password_confirmation" class="block mt-1 w-full  form-control"
                                           type="password"
                                           name="password_confirmation" required autocomplete="new-password"/>
-                            <x-input-error :messages="$errors->get('Mật khâủ không khớp')" class="mt-2"/>
+                            @error('password')
+                            <x-input-error :messages="$message" class="mt-2"/>
+                            @enderror
                         </div>
 
                         <div class="flex items-center justify-end mt-4">

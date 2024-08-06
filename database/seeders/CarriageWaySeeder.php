@@ -21,9 +21,8 @@ class CarriageWaySeeder extends Seeder
                 'trip_of_day' => 2,
                 'average_travel_time' => 4,
                 'distance' => 160,
-                'car_station_id' => $carStationIds['Bến xe TT Cần Thơ'],
-                'car_station_form' => $carStationIds['Bến xe TP Hồ Chí Minh'],
-
+                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
+                'car_station_from' => $carStationIds['Bến xe Quận 8'],
 
             ],
             [
@@ -32,7 +31,7 @@ class CarriageWaySeeder extends Seeder
                 'trip_of_day' =>2,
                 'average_travel_time' => 2,
                 'distance' => 60,
-                'car_station_is' => $carStationIds['Bến xe TT Cần Thơ'],
+                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
                 'car_station_from' => $carStationIds['Bến xe TT Vĩnh Long']
             ], [
                 'name' => 'Cần Thơ - Hậu Giang',
@@ -40,15 +39,16 @@ class CarriageWaySeeder extends Seeder
                 'trip_of_day' => 2,
                 'average_travel_time' => 1,
                 'distance' => 40,
-                'car_station_is' => $carStationIds['Bến xe TT Cần Thơ'],
+                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
                 'car_station_from' => $carStationIds['Bến xe TT Hậu Giang']
-            ], [
+            ],
+            [
                 'name' => 'Cần Thơ - Đồng Tháp',
                 'day_of_week'=>5,
                 'trip_of_day' =>2,
                 'average_travel_time' => 4,
                 'distance' => 79,
-                'car_station_is' => $carStationIds['Bến xe TT Cần Thơ'],
+                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
                 'car_station_from' => $carStationIds['Bến xe TT Đồng Tháp']
             ],
             [
@@ -57,7 +57,7 @@ class CarriageWaySeeder extends Seeder
                 'trip_of_day' =>2,
                 'average_travel_time' => 5,
                 'distance' => 142,
-                'car_station_is' => $carStationIds['Bến xe TT Cần Thơ'],
+                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
                 'car_station_from' => $carStationIds['Bến xe TT Cà Mau']
             ],
             [
@@ -66,10 +66,9 @@ class CarriageWaySeeder extends Seeder
                 'trip_of_day' =>2,
                 'average_travel_time'=>3,
                 'distance' => 120,
-                'car_station_is' => $carStationIds['Bến xe TT Cần Thơ'],
+                'car_station_to' => $carStationIds['Bến xe TT Cần Thơ'],
                 'car_station_from' => $carStationIds['Bến xe TT Bến Tre']
             ],
-
         ]);
     }
 }
