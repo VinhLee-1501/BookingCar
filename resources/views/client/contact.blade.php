@@ -57,32 +57,25 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name"
-                                               value="{{ $user ? $user->name : '' }} " name="name"
-                                               placeholder="Your Name" required>
+                                        <input type="text" class="form-control" id="name" value="{{ $user ? $user->name : '' }} " name="name" placeholder="Your Name" required>
                                         <label for="name">Tên</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email"
-                                               value="{{ $user ? $user->email : '' }}" placeholder="Your Email"
-                                               required>
+                                        <input type="email" class="form-control" id="email" name="email" value="{{ $user ? $user->email : '' }}" placeholder="Your Email" required>
                                         <label for="email">Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="number" class="form-control" id="phone" name="phone"
-                                               value="{{ $user ? $user->phone : '' }}" placeholder="Số điện thoại"
-                                               required>
+                                        <input type="number" class="form-control" id="phone" name="phone" value="{{ $user ? $user->phone : '' }}" placeholder="Số điện thoại" required>
                                         <label for="phone">Số điện thoại</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control" id="departure_date"
-                                               name="departure_date" placeholder="Chọn ngày đi" required>
+                                        <input type="date" class="form-control" id="departure_date" name="departure_date" placeholder="Chọn ngày đi" required>
                                         <label for="departure_date">Ngày đi</label>
                                     </div>
                                 </div>
@@ -99,8 +92,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                                  name="message" style="height: 150px" required></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
                                         <label for="message">Ghi chú</label>
                                     </div>
                                 </div>

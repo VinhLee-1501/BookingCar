@@ -3,5 +3,5 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('signin', function () {
-    return view('client.signin');
+    return view('auth.signin');
 })->name('signin');

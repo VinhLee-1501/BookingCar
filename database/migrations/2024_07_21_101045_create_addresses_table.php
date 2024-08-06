@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('city');
             $table->string('district');
             $table->string('road');
-            $table->foreignId('customer_id')
+            $table->foreignId('user_id')
             ->nullable()
-            ->constrained('customers')
+            ->constrained('users')
             ->onDelete('set null');
             $table->timestamps();
         });

@@ -13,18 +13,18 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
                 <a href="{{ route('user.home') }}"
-                   class="nav-item nav-link {{ request()->routeIs('user.home') ? 'active' : '' }}">Trang chủ</a>
+                    class="nav-item nav-link {{ request()->routeIs('user.home') ? 'active' : '' }}">Trang chủ</a>
                 <a href="{{ route('user.schedule') }}"
-                   class="nav-item nav-link {{ request()->routeIs('user.schedule') ? 'active' : '' }} ">Lịch trình</a>
+                    class="nav-item nav-link {{ request()->routeIs('user.schedule') ? 'active' : '' }} ">Lịch trình</a>
                 <a href="{{ route('user.searchTicket') }}"
-                   class="nav-item nav-link {{ request()->routeIs('user.searchTicket') ? 'active' : '' }} ">Tra cứu
+                    class="nav-item nav-link {{ request()->routeIs('user.searchTicket') ? 'active' : '' }} ">Tra cứu
                     vé</a>
                 <a href="{{ route('user.news') }}"
-                   class="nav-item nav-link {{ request()->routeIs('user.news') ? 'active' : '' }} ">Tin tức</a>
+                    class="nav-item nav-link {{ request()->routeIs('user.news') ? 'active' : '' }} ">Tin tức</a>
                 <a href="{{ route('user.contact') }}"
-                   class="nav-item nav-link {{ request()->routeIs('user.contact') ? 'active' : '' }} ">Liên hệ</a>
+                    class="nav-item nav-link {{ request()->routeIs('user.contact') ? 'active' : '' }} ">Liên hệ</a>
                 <a href="{{ route('user.about') }}"
-                   class="nav-item nav-link {{ request()->routeIs('user.about') ? 'active' : '' }} ">Về chúng tôi</a>
+                    class="nav-item nav-link {{ request()->routeIs('user.about') ? 'active' : '' }} ">Về chúng tôi</a>
             </div>
 
 
@@ -33,7 +33,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <button class="bg-transparent border-0 d-flex" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                aria-expanded="false">
 
                                 <div width="30%" height="30%" class="bg-info rounded-circle mt-1">
                                     <span>
@@ -45,16 +45,16 @@
                                 </a>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-light">
-                                <li><a class="dropdown-item" href="#">Thông tin tài khoản</a></li>
+                                <li><a class="dropdown-item" href="{{ route('user.profile') }}">Thông tin tài khoản</a></li>
                                 <li><a class="dropdown-item" href="{{ route('logoutuser') }}">Đăng xuất</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             @else
-                <a href="{{ route('signin') }}" class="btn btn-primary px-3 d-none d-lg-flex">Đăng
+                <a href="{{ route('user.signin') }}" class="btn btn-primary px-3 d-none d-lg-flex">Đăng
                     nhập</a>
-        @endif
+            @endif
 
 
 
