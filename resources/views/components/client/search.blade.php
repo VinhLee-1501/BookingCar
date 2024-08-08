@@ -23,12 +23,15 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <input type="text" class="form-control border-0 py-3" placeholder="Chọn điểm đi"
-                                   name="start">
+                            <select name="start[]" class="form-select form-select-lg mb-3 select-input-start-location"
+                                    multiple="multiple">
+                                {!! \App\Helper\Client\SearchTheRides::searchStartLocation() !!}
+                            </select>
                         </div>
-                        <div class="col-md-3">
-                            <input type="text" class="form-control border-0 py-3" placeholder="Chọn điểm đến"
-                                   name="end">
+                        <div class="col-md-3 ">
+                            <select name="end[]" class="form-select select-input-end-location" multiple="multiple">
+                                {!! \App\Helper\Client\SearchTheRides::searchEndLocation() !!}
+                            </select>
                         </div>
                         <div class="col-md-3">
                             <input type="date" class="form-control border-0 py-3" placeholder="Chọn ngày đi"
