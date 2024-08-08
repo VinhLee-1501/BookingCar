@@ -11,8 +11,8 @@
                         aria-controls="pills-login" aria-selected="true">Đăng nhập</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link"  id="tab-register" href="{{route('signup')}}"
-                        aria-controls="pills-register" aria-selected="false">Đăng ký</a>
+                    <a class="nav-link" id="tab-register" href="{{ route('signup') }}" aria-controls="pills-register"
+                        aria-selected="false">Đăng ký</a>
                 </li>
             </ul>
             <!-- Pills navs -->
@@ -27,7 +27,9 @@
                             <x-input-label for="email" :value="__('Email')" class="form-label" />
                             <x-text-input id="email" class="block mt-1 w-full form-control" type="email"
                                 name="email" :value="old('email')" required autofocus autocomplete="username" />
-                            <x-input-error :messages="$errors->get('email')" class="mt-2 text-red" />
+                            @error('email')
+                                <x-input-error :messages="$message" class="mt-2" />
+                            @enderror
                         </div>
 
 
@@ -38,7 +40,9 @@
                             <x-text-input id="password" class="block mt-1 w-full form-control" type="password"
                                 name="password" required autocomplete="current-password" />
 
-                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                            @error('password')
+                                <x-input-error :messages="$message" class="mt-2" />
+                            @enderror
                         </div>
 
 
@@ -82,8 +86,9 @@
                                 </x-primary-button>
                             </div>
                             <div class="col-md-6">
-                                <a href="{{ route('auth.google') }}" >
-                                    <img src="https://alpineschools.org/wp-content/uploads/2021/08/btn_google_signin_dark_pressed_web@2x.png" class=" img-fluid" alt="">
+                                <a href="{{ route('auth.google') }}">
+                                    <img src="https://alpineschools.org/wp-content/uploads/2021/08/btn_google_signin_dark_pressed_web@2x.png"
+                                        class=" img-fluid" alt="">
                                 </a>
                             </div>
 
@@ -93,7 +98,7 @@
 
                         <!-- Register buttons -->
                         <div class="text-center mt-3">
-                            <p>Không có tài khoản? <a href="{{route('signup')}}">Đăng ký</a></p>
+                            <p>Không có tài khoản? <a href="{{ route('signup') }}">Đăng ký</a></p>
                         </div>
                     </form>
                 </div>

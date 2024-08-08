@@ -17,8 +17,8 @@ class RideFilterController extends Controller
 
         $ridefilterData = TheRides::where('carriage_way_id', '=', $id)
             ->join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
-            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_id')
-            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_form')
+            ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_to')
+            ->join('stations as st2', 'st2.id', '=', 'carriage_ways.car_station_from')
             ->select('the_rides.time_to_go as timeStart',
                 'the_rides.estimated_arrival_time as timeEnd',
                 'the_rides.id as id',
@@ -34,5 +34,3 @@ class RideFilterController extends Controller
         return view('client.rideFilter', compact('ridefilterData'));
     }
 }
-
-  

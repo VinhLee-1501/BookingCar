@@ -15,7 +15,7 @@ class HomeController extends Controller
 
         $name1 = 'Hồ Chí Minh';
         $name2 = 'Vĩnh Long';
-        $name3 = 'Cà Mau';
+        $name3 = 'Hậu Giang';
 
         $tiketHCMData = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
             ->join('stations as st1', 'st1.id', '=', 'carriage_ways.car_station_to')
@@ -29,7 +29,8 @@ class HomeController extends Controller
                 'carriage_ways.distance as distance',
                 'carriage_ways.average_travel_time as time',
                 'st1.name as goto',
-                'st2.name  as gofrom'
+                'st2.name  as gofrom',
+                'carriage_ways.id as carriage_way_id',
             )
             ->where('the_rides.name', 'LIKE', '%' . $name1 . '%')
             ->get();
@@ -48,7 +49,8 @@ class HomeController extends Controller
                 'carriage_ways.distance as distance',
                 'carriage_ways.average_travel_time as time',
                 'st1.name as goto',
-                'st2.name  as gofrom'
+                'st2.name  as gofrom',
+                'carriage_ways.id as carriage_way_id',
             )
             ->where('the_rides.name', 'LIKE', '%' . $name2 . '%')
             ->get();
@@ -65,7 +67,9 @@ class HomeController extends Controller
                 'carriage_ways.distance as distance',
                 'carriage_ways.average_travel_time as time',
                 'st1.name as goto',
-                'st2.name  as gofrom'
+                'st2.name  as gofrom',
+                'carriage_ways.id as carriage_way_id',
+
             )
             ->where('the_rides.name', 'LIKE', '%' . $name3 . '%')
             ->get();
@@ -80,4 +84,6 @@ class HomeController extends Controller
         // dd($tiketHCMData);
         return view('client.index', compact('Data'));
     }
+
+
 }

@@ -29,6 +29,10 @@
 
         <div class="d-flex justify-content-center align-items-center mt-5">
             <div class="card" style="width: 50rem">
+                @if ( isset($error) )
+                <p class="text-center text-danger">{{ $error }}</p>
+            @else
+                @foreach( $tickets as $ticket)
                 <div class="row col-md-12">
                     <div class="col-md-4">
                         <img class="img-fluid p-1" src="{{asset('client/img/logo-hcn.png')}}" style="width: 180px;">
@@ -37,10 +41,6 @@
                         <h3 class="">BeeCar</h3>
                     </div>
                 </div>
-                @if ( isset($error) )
-                    <p class="text-center text-danger">{{ $error }}</p>
-                @else
-                    @foreach( $tickets as $ticket)
                         <div class="card-body">
                             <h3 class="card-text text-center">Vé xe khách</h3>
                             <p class="text-start ps-2">Mã vé xe: 0{{ $ticket->name }}</p>

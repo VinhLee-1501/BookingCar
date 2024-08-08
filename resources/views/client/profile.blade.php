@@ -12,15 +12,14 @@
 
                 <div class="card mb-4">
                     <div class="card-body text-center">
-                        {{-- <img src="duong_dan_den_anh_dai_dien.jpg" alt="Ảnh đại diện" class="rounded-circle img-fluid" style="width: 150px;"> --}}
-                        <h5 class="my-3">{{$user->name}}</h5>
+                        <h5 class="my-3">{{$users['user']->name}}</h5>
                         <p class="text-muted mb-1">
-                        @if ($user->role == 0)
+                        @if ($users['user']->role == 0)
                             <p class="text-muted mb-1">Khách hàng</p>
                         @else
                             <p class="text-muted mb-1">Quản trị</p>
                         @endif
-                        <p class="text-muted mb-4">{{ $user->address }}</p>
+                        <p class="text-muted mb-4">{{$users['user']->address }}</p>
                         <a href="{{route('user.edituser')}}" class="btn btn-primary">Cập nhật hồ sơ</a>
 
                     </div>
@@ -33,31 +32,34 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5>Thông tin cá nhân</h5>
-                        <p class="text-muted">Họ tên: {{$user->name}}</p>
-                        <p class="text-muted">Email: {{$user->email}}</p>
-                        <p class="text-muted">Số điện thoại: {{$user->phone}}</p>
-                        <p class="text-muted">Địa chỉ: {{$user->address}}</p>
-                        <p class="text-muted">Địa chỉ: {{$user->address}}</p>
+                        <p class="text-muted">Họ tên: {{$users['user']->name}}</p>
+                        <p class="text-muted">Email: {{$users['user']->email}}</p>
+                        <p class="text-muted">Số điện thoại: {{$users['user']->phone}}</p>
+                        <p class="text-muted">Địa chỉ: {{$users['user']->address}}</p>
 
-                        <h5>Lịch sử đặt xe</h5>
-                        <ul class="list-unstyled">
-                            <li class="media">
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Chuyến Cần Thơ - Vĩnh Long</h6>
-                                    Ngày đặt: 01/01/2024 - Trạng thái: Đã hoàn thành
-                                </div>
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
 
                 <!-- Thông tin liên hệ -->
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5>Thông tin liên hệ</h5>
+                        <h5>Lịch sử đặt xe</h5>
                         <ul class="list-unstyled">
-                            <li><i class="bi bi-envelope"></i> {{$user->email}}</li>
-                            <li><i class="bi bi-phone"></i> {{$user->phone}}</li>
+                            @foreach($users['userTickets'] as $users)
+                            <li class="media">
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">{{$users->ride_name}}</h6>
+                                    Mã vé: {{$users->ticket_car_name}} - Ngày đặt: {{ Carbon\Carbon::parse($users->time)->format('d/m/Y') }} - Trạng thái:
+                                    @if($users->user_role == '0')
+
+                                       Đã thanh toán
+                                    @else
+                                        Chưa thanh toán
+                                    @endif
+                                 </div>
+                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

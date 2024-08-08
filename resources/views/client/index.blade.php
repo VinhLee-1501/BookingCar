@@ -58,14 +58,22 @@
                     <div class="">
                         <h5 class="p-3">Tuyến xe Tp Hồ Chí Minh</h5>
                         @foreach ($Data['tiketHCMData'] as $tiketHome)
-                            <div class="flex  border-b p-4 ">
-                                <div class="flex justify-between ">
-                                    <span class="text-green text-lg font-medium">{{ $tiketHome->name }}</span>
-                                    <span class="ms-5 text-danger">{{ $tiketHome->price }}.000<!-- -->đ</span>
+                            <a href="{{route('user.seatPosition', ['id' => $tiketHome->id])}}" class="text-dark">
+                                <div class="flex  border-b p-4 ">
+                                    <div class="row d-flex">
+                                        <div class="col-md-7">
+                                            <span class=" text-lg font-medium">{{ $tiketHome->name }}</span>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <span class="ms-5 text-danger">{{ $tiketHome->price }}.000<!-- -->đ</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-[15px]">{{ $tiketHome->distance }}km -
+                                        {{ $tiketHome->time }}
+                                        giờ - {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('d/m/Y') }}</span>
+
                                 </div>
-                                <span class="text-gray text-[15px]">{{ $tiketHome->distance }}km - {{ $tiketHome->time }}8
-                                    giờ - {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('d/m/Y') }}</span>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -76,36 +84,46 @@
                     <div class="max-h-64 overflow-y-auto">
                         <h5 class="p-3">Tuyến xe Vĩnh Long</h5>
                         @foreach ($Data['tiketVLData'] as $ticket)
-                            <div class="flex  border-b p-4 last-of-type:border-0">
-                                <div class="flex justify-between">
-                                    <span class="text-green text-lg font-medium">{{ $ticket->name }}</span>
-                                    <span class="ms-5 text-danger">{{ $ticket->price }}.000<!-- -->đ</span>
+                            <a href="{{route('user.seatPosition', ['id' => $ticket->id])}}" class="text-dark">
+                                <div class="flex  border-b p-4 last-of-type:border-0">
+                                    <div class="row d-flex">
+                                        <div class="col-md-7">
+                                            <span class=" text-lg font-medium">{{ $ticket->name }}</span>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <span class="ms-5 text-danger">{{ $ticket->price }}.000<!-- -->đ</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-[15px]">{{ $ticket->distance }}km - {{ $ticket->time }}
+                                        giờ - {{ Carbon\Carbon::parse($ticket->timeStart)->format('d/m/Y') }}</span>
                                 </div>
-                                <span class="text-gray text-[15px]">{{ $tiketHome->distance }}km - {{ $tiketHome->time }}8
-                                    giờ - {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('d/m/Y') }}</span>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
                 <div class="col-md-4 card m-2" style="border-radius:15px;">
                     <img alt="" loading="lazy" decoding="async" data-nimg="1"
                         class="transition-all duration-200 undefined" style="color: transparent;"
-                        src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_2_8bf6ed1d78/Rectangle_23_2_8bf6ed1d78.png">
+                        src="https://cdn.futabus.vn/futa-busline-cms-dev/Rectangle_23_4_061f4249f6/Rectangle_23_4_061f4249f6.png">
 
                     <div class="max-h-64 overflow-y-auto">
-                        <h5 class="p-3">Tuyến xe Cà Mau</h5>
+                        <h5 class="p-3">Tuyến xe Hậu Giang</h5>
                         @foreach ($Data['tiketCMData'] as $ticket)
-                            {{-- <a href="{{route('')}}"> --}}
-                            <div class="flex  border-b p-4 last-of-type:border-0">
-                                <div class="flex justify-between">
-                                    <span class="text-black text-lg font-medium">{{ $tiketHome->name }}</span>
-                                    <span class="tms-5 text-danger">{{ $tiketHome->price }}.000<!-- -->đ</span>
+                            <a href="{{route('user.seatPosition', ['id' => $ticket->id])}}" class="text-dark">
+                                <div class="flex  border-b p-4 last-of-type:border-0">
+                                    <div class="row d-flex">
+                                        <div class="col-md-7">
+                                            <span class=" text-lg font-medium">{{ $ticket->name }}</span>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <span class="ms-5 text-danger">{{ $ticket->price }}.000<!-- -->đ</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-[15px]">{{ $ticket->distance }}km -
+                                        {{ $ticket->time }} giờ -
+                                        {{ Carbon\Carbon::parse($ticket->timeStart)->format('d/m/Y') }}</span>
                                 </div>
-                                <span class="text-gray text-[15px]">{{ $tiketHome->distance }}km -
-                                    {{ $tiketHome->time }}8 giờ -
-                                    {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('d/m/Y') }}</span>
-                            </div>
-                            {{-- </a> --}}
+                            </a>
                         @endforeach
                     </div>
 
@@ -203,7 +221,8 @@
                             </div>
                         </div>
                     </a>
-                </div> <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="{{ route('user.news') }}">
                         <div class="team-item rounded overflow-hidden">
                             <div class="position-relative">

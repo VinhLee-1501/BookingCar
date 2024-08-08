@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\Client\ContactController;
-use App\Mail\ExampleMail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\ContactController;
 use App\Mail\ExampleMail;

@@ -10,6 +10,7 @@ use App\Models\TicketCar;
 use App\Models\TicketSeatCar;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Exception;
 
 class PaymentController extends Controller
 {

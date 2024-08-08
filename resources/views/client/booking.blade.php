@@ -66,7 +66,7 @@
                                 </div>
                                 <div>
                                     <h6>Thời gian</h6>
-                                    <h6 class="text-success">{{  $item->travel_time }}</h6>
+                                    <h6 class="text-success">{{$item->travel_time }}</h6>
                                 </div>
                                 <div>
                                     <h5 class="text-danger">{{ Carbon\Carbon::parse($item->estimated_arrival_time)->format('H:i') }}</h5>

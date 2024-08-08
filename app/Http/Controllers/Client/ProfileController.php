@@ -14,9 +14,34 @@ class ProfileController extends Controller
     public function index()
     {
         $user = Auth::user();
-        // dd($user->name);
-        return view('client.profile', compact('user'));
+        $userId = $user->id;
+
+        $userTickets = User::join('ticket_booking_cars', 'ticket_booking_cars.user_id', '=', 'users.id')
+            ->join('ticket_cars', 'ticket_cars.ticket_booking_id', '=', 'ticket_booking_cars.id')
+            ->join('the_rides', 'the_rides.id', '=', 'ticket_cars.the_ride_id')
+            ->select(
+                'users.id as user_id',
+                'users.name as user_name',
+                'users.role as user_role',
+                'users.phone as user_phone',
+                'users.address as user_address',
+                'ticket_booking_cars.status as booking_status',
+                'ticket_cars.name as ticket_car_name',
+                'ticket_cars.created_at as ticket_created_at',
+                'the_rides.name as ride_name'
+            )
+            ->where('users.id', '=', $userId)
+            ->get();
+
+            $users = [
+                'userTickets' => $userTickets,
+                'user' => $user
+            ];
+
+            // dd($userTickets);
+        return view('client.profile', compact('users'));
     }
+
 
     public function edit()
     {

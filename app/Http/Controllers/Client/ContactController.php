@@ -48,7 +48,8 @@ class ContactController extends Controller
             'departure_date' => $request->departure_date,
         ];
 
-        // Địa chỉ email quản trị (có thể lấy từ cấu hình .env)
+        // dd($contactData);
+
         $adminEmail = env('ADMIN_EMAIL', 'nguyethue1905@gmail.com');
 
         // Gửi email đến địa chỉ quản trị
@@ -56,5 +57,6 @@ class ContactController extends Controller
 
         // Trở lại trang trước với thông báo thành công
         return back()->with('success', 'Thông tin đã được gửi thành công.');
+        
     }
 }
