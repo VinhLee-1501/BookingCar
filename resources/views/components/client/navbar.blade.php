@@ -30,8 +30,8 @@
 
             @if (auth()->check())
                 <div class="" id="navbarNavDarkDropdown me-4">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item dropdown me-5">
                             <button class="bg-transparent border-0 d-flex" data-bs-toggle="dropdown"
                                 aria-expanded="false">
 
