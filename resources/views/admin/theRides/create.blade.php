@@ -1,6 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('content')
+
     <div class="card-body">
         <h5 class="card-title fw-semibold mb-4">Thêm chuyến xe</h5>
         <div class="card">
@@ -87,4 +88,5 @@
             </div>
         </div>
     </div>
+
 @endsection
