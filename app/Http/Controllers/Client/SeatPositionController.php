@@ -23,6 +23,7 @@ class SeatPositionController extends Controller
             ->join('seat_positions', 'seat_positions.cars_id', '=', 'cars.id')
             ->select('the_rides.*', 'start_station.name')
             ->where('the_rides.id', $id)
+            // ->where('seat_positions.cars_id','the_rides.car_id')
             ->first();
             // dd($query);
 
@@ -31,10 +32,17 @@ class SeatPositionController extends Controller
 
     public function getSeatPositions($id)
     {
-        $seatPositionsA = SeatPosition::where('name', 'like', 'A%')->distinct()->get();
-        $seatPositionsB = SeatPosition::where('name', 'like', 'B%')->distinct()->get();
-
         $theRide = $this->getRideData($id);
+
+        $seatPositionsA = SeatPosition::where('name', 'like', 'A%')
+        ->where('seat_positions.cars_id' , $theRide->car_id)
+        ->distinct()
+        ->get();
+        $seatPositionsB = SeatPosition::where('name', 'like', 'B%')
+        ->where('seat_positions.cars_id' , $theRide->car_id)
+        ->distinct()->get();
+
+// dd($seatPositionsA, $seatPositionsB);
 
 
 

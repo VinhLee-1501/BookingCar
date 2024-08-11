@@ -32,7 +32,7 @@ class HomeController extends Controller
                 'st2.name  as gofrom',
                 'carriage_ways.id as carriage_way_id',
             )
-            ->where('carriage_ways.name', 'LIKE', '%' . $name1 . '%')
+            ->where('the_rides.name', 'LIKE', '%' . $name1 . '%')
             ->get();
 
 
@@ -52,7 +52,7 @@ class HomeController extends Controller
                 'st2.name  as gofrom',
                 'carriage_ways.id as carriage_way_id',
             )
-            ->where('carriage_ways.name', 'LIKE', '%' . $name2 . '%')
+            ->where('the_rides.name', 'LIKE', '%' . $name2 . '%')
             ->get();
 
 
@@ -72,10 +72,10 @@ class HomeController extends Controller
                 'carriage_ways.id as carriage_way_id',
 
             )
-            ->where('carriage_ways.name', 'LIKE', '%' . $name3 . '%')
+            ->where('the_rides.name', 'LIKE', '%' . $name3 . '%')
             ->get();
 
-// dd($tiketCMData);
+// dd($tiketHCMData);
         $Data = [
             'tiketHCMData' => $tiketHCMData,
             'tiketVLData' => $tiketVLData,

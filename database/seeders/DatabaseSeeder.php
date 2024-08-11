@@ -18,13 +18,14 @@ class DatabaseSeeder extends Seeder
             CitySeeder::class,
             DistrictSeeder::class,
             StationSeeder::class,
-            CarriageWaySeeder::class,
+
             CategorySeeder::class,
             CarSeeder::class,
             AddressSeeder::class,
             SeatPositionSeeder::class,
-            TicketSeatCarSeeder::class,
+            CarriageWaySeeder::class,
             TheRidesSeeder::class,
+            TicketSeatCarSeeder::class,
             TicketBookingCarSeeder::class,
             TicketCarSeeder::class,
         ]);

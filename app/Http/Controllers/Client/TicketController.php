@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\TicketCar;
 use App\Models\TicketBookingCar;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TicketController extends Controller
 {
@@ -23,8 +24,8 @@ class TicketController extends Controller
             if (!$latestBooking) {
                 return redirect()->back()->with('error', 'Không tìm thấy đơn hàng nào.');
             }
-
-            $tickets = TicketCar::join('the_rides', 'the_rides.id', '=', 'ticket_cars.the_ride_id')
+            $tickets = TicketCar::
+            join('the_rides', 'the_rides.id', '=', 'ticket_cars.the_ride_id')
             ->join('ticket_booking_cars', 'ticket_booking_cars.id', '=', 'ticket_cars.ticket_booking_id')
             ->join('users', 'users.id', '=', 'ticket_booking_cars.user_id')
             ->join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
@@ -32,7 +33,8 @@ class TicketController extends Controller
             ->join('stations as end', 'carriage_ways.car_station_from', '=', 'end.id')
             ->join('cars', 'cars.id', '=', 'the_rides.car_id')
             ->join('categories', 'categories.id', '=', 'cars.category_id')
-            ->join('seat_positions', 'seat_positions.cars_id', '=', 'cars.id')
+            ->join('ticket_seat_cars', 'ticket_seat_cars.ticket_id', '=', 'ticket_cars.id')
+            ->join('seat_positions', 'seat_positions.id', '=', 'ticket_seat_cars.seat_id')
             ->select(
                 'ticket_cars.id as ticket_id',
                 'ticket_cars.name as ticket_name',
@@ -47,17 +49,17 @@ class TicketController extends Controller
                 'end.name as end_station_name',
                 'cars.license_plates as license_plates',
                 'categories.name as category_name',
-                'seat_positions.name as seat_name',
-                'users.name as user_name',
                 'users.phone as user_phone',
-                'users.email as user_email',
                 'ticket_booking_cars.prepayment as prepayment',
-
+                'ticket_seat_cars.seat_id as seat',
+                'seat_positions.name as seat_position_name'
             )
             ->where('ticket_cars.ticket_booking_id', $latestBooking->id)
             ->groupBy(
                 'ticket_cars.id',
+                'ticket_cars.name',
                 'the_rides.id',
+                'the_rides.name',
                 'the_rides.time_to_go',
                 'the_rides.estimated_arrival_time',
                 'ticket_booking_cars.id',
@@ -65,11 +67,12 @@ class TicketController extends Controller
                 'carriage_ways.name',
                 'start.name',
                 'end.name',
-                'cars.name',
+                'cars.license_plates',
                 'categories.name',
-                'seat_positions.name',
-
-
+                'users.phone',
+                'ticket_booking_cars.prepayment',
+                'ticket_seat_cars.seat_id',
+                'seat_positions.name'
             )
             ->get();
 

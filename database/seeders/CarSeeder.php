@@ -13,34 +13,34 @@ class CarSeeder extends Seeder
     public function run(): void
     {
         DB::table('cars')->insert([
-            'name' => 'Hyundai New County SL',
+            'name' => 'Xe 1',
             'license_plates' => '64H - 098.76',
             'category_id' => 2,
         ]);
         DB::table('cars')->insert([
-            'name' => 'Hyundai Universe Advanced',
+            'name' => 'Xe 2',
             'license_plates' => '65H - 967.76',
-            'category_id' => 3,
+            'category_id' => 1,
         ]);
         DB::table('cars')->insert([
-            'name' => 'Hyundai County',
+            'name' => 'Xe 3',
             'license_plates' => '65H - 945.76',
             'category_id' => 1,
 
         ]);
         DB::table('cars')->insert([
-            'name' => 'Hyundai County',
+            'name' => 'Xe 4',
             'license_plates' => '65H - 945.26',
             'category_id' => 2,
         ]);
         DB::table('cars')->insert([
-            'name' => 'Hyundai County',
+            'name' => 'Xe 5',
             'license_plates' => '65H - 945.26',
             'category_id' => 2,
 
         ]);
          DB::table('cars')->insert([
-        'name' => 'Hyundai County',
+        'name' => 'Xe 6',
         'license_plates' => '65H - 945.26',
         'category_id' => 1,
     ]);
