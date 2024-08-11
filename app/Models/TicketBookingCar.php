@@ -13,4 +13,8 @@ class TicketBookingCar extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    public function ticketCars()
+    {
+        return $this->hasMany(TicketCar::class, 'ticket_booking_id');
+    }
 }

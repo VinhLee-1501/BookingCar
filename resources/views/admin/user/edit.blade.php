@@ -26,7 +26,7 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" id="email" class="form-control"
                                 value="{{ old('email', $user->email) }}">
-                                @error('email')
+                            @error('email')
                                 <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
@@ -37,7 +37,7 @@
                             <label for="phone" class="form-label">Số điện thoại</label>
                             <input type="text" name="phone" id="phone" class="form-control"
                                 value="{{ old('phone', $user->phone) }}">
-                                @error('phone')
+                            @error('phone')
                                 <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
@@ -45,7 +45,7 @@
                             <label for="address" class="form-label">Địa chỉ</label>
                             <input type="text" name="address" id="address" class="form-control"
                                 value="{{ old('address', $user->address) }}">
-                                @error('address')
+                            @error('address')
                                 <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
@@ -56,7 +56,7 @@
                             <label for="cccd" class="form-label">Số CCCD</label>
                             <input type="text" name="cccd" id="cccd" class="form-control"
                                 value="{{ old('cccd', $user->cccd) }}">
-                                @error('cccd')
+                            @error('cccd')
                                 <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
@@ -66,7 +66,7 @@
                             <label for="birthday" class="form-label">Ngày sinh</label>
                             <input type="date" name="birthday" id="birthday" class="form-control"
                                 value="{{ old('birthday', $user->birthday) }}">
-                                @error('birthday')
+                            @error('birthday')
                                 <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>

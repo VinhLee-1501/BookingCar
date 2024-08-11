@@ -1,49 +1,65 @@
 $(function () {
-
-
     // =====================================
     // Profit
     // =====================================
+    if (typeof salesData === "undefined") {
+        console.error("Sales data is not available.");
+        return;
+    }
+
+    // Kiểm tra dữ liệu
+    const data_total = salesData.map((data) => data.total_sales);
+    const data_month = salesData.map((data) => data.month);
+    console.log(data_total);
+
+    const max = Math.max(...data_total);
+    function getNextEvenNumber(num) {
+        const nextTens = Math.ceil(num / 10) * 10;
+        return nextTens % 20 === 0 ? nextTens : nextTens + 10;
+    }
+    const nextEvenNumber = getNextEvenNumber(max);
     var chart = {
         series: [
-            {name: "Earnings this month:", data: [355, 390, 300, 350, 390, 180, 355, 390]},
-            {name: "Expense this month:", data: [280, 250, 325, 215, 250, 310, 280, 250]},
+            {
+                name: "Tổng doanh thu",
+                data: data_total,
+            },
+            {
+                name: "Expense this month:",
+                data: [],
+            },
         ],
 
         chart: {
             type: "bar",
             height: 345,
             offsetX: -15,
-            toolbar: {show: true},
+            toolbar: { show: true },
             foreColor: "#adb0bb",
-            fontFamily: 'inherit',
-            sparkline: {enabled: false},
+            fontFamily: "inherit",
+            sparkline: { enabled: false },
         },
 
-
         colors: ["#5D87FF", "#49BEFF"],
-
 
         plotOptions: {
             bar: {
                 horizontal: false,
                 columnWidth: "35%",
                 borderRadius: [6],
-                borderRadiusApplication: 'end',
-                borderRadiusWhenStacked: 'all'
+                borderRadiusApplication: "end",
+                borderRadiusWhenStacked: "all",
             },
         },
-        markers: {size: 0},
+        markers: { size: 0 },
 
         dataLabels: {
             enabled: false,
         },
 
-
         legend: {
             show: false,
         },
-
 
         grid: {
             borderColor: "rgba(0,0,0,0.1)",
@@ -57,17 +73,18 @@ $(function () {
 
         xaxis: {
             type: "category",
-            categories: ["16/08", "17/08", "18/08", "19/08", "20/08", "21/08", "22/08", "23/08"],
+            categories: data_month,
             labels: {
-                style: {cssClass: "grey--text lighten-2--text fill-color"},
+                style: {
+                    cssClass: "grey--text lighten-2--text fill-color",
+                },
             },
         },
-
 
         yaxis: {
             show: true,
             min: 0,
-            max: 400,
+            max: nextEvenNumber,
             tickAmount: 4,
             labels: {
                 style: {
@@ -82,8 +99,7 @@ $(function () {
             colors: ["transparent"],
         },
 
-
-        tooltip: {theme: "light"},
+        tooltip: { theme: "light" },
 
         responsive: [
             {
@@ -92,18 +108,15 @@ $(function () {
                     plotOptions: {
                         bar: {
                             borderRadius: 3,
-                        }
+                        },
                     },
-                }
-            }
-        ]
-
-
+                },
+            },
+        ],
     };
 
     var chart = new ApexCharts(document.querySelector("#chart"), chart);
     chart.render();
-
 
     // =====================================
     // Breakup
@@ -123,7 +136,7 @@ $(function () {
                 startAngle: 0,
                 endAngle: 360,
                 donut: {
-                    size: '75%',
+                    size: "75%",
                 },
             },
         },
@@ -159,7 +172,6 @@ $(function () {
     var chart = new ApexCharts(document.querySelector("#breakup"), breakup);
     chart.render();
 
-
     // =====================================
     // Earning
     // =====================================
@@ -179,7 +191,7 @@ $(function () {
             {
                 name: "Earnings",
                 color: "#49BEFF",
-                data: [25, 66, 20, 40, 12, 58, 20],
+                data: data_total,
             },
         ],
         stroke: {
@@ -207,4 +219,4 @@ $(function () {
         },
     };
     new ApexCharts(document.querySelector("#earning"), earning).render();
-})
+});
