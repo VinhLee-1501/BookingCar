@@ -107,16 +107,6 @@
                                     @endforeach
                                     <button type="submit" class="btn btn-primary" name="payUrl">Thanh toán</button>
                                 </form>
-                                {{--                                <form id="vnpayForm" action="{{ route('user.vnpay_payment') }}" method="post">--}}
-                                {{--                                    @csrf--}}
-                                {{--                                    <input name="totalPrice" value="{{ $data['totalPrice'] }}" hidden>--}}
-                                {{--                                    <button type="submit" class="btn btn-primary" name="redirect">Thanh toán</button>--}}
-                                {{--                                </form>--}}
-                                {{--                                                                <form id="cashForm" action="{{ route('user.payment') }}" method="post">--}}
-                                {{--                                    @csrf--}}
-                                {{--                                    <input name="totalPrice" value="{{ $data['totalPrice'] }}" hidden>--}}
-                                {{--                                    <button type="submit" class="btn btn-primary">Thanh toán</button>--}}
-                                {{--                                </form>--}}
                             </div>
                         </div>
                     </div>

@@ -11,14 +11,14 @@
             <div class="row g-3">
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <input type="phone" class="form-control" id="name" placeholder="Nhập mã vé" name="phone">
+                        <input type="text" class="form-control" id="phone" placeholder="Nhập số điện thoại" name="phone">
                         <label for="phone">Nhập số điện thoại</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="email" placeholder="Nhập mã vé" name="ticket_id">
-                        <label for="email">Nhập mã vé</label>
+                        <input type="text" class="form-control" id="ticket_id" placeholder="Nhập mã vé" name="ticket_id">
+                        <label for="ticket_id">Nhập mã vé</label>
                     </div>
                 </div>
                 <div class="col-4">
@@ -29,18 +29,22 @@
 
         <div class="d-flex justify-content-center align-items-center mt-5">
             <div class="card" style="width: 50rem">
-                @if ( isset($error) )
-                <p class="text-center text-danger">{{ $error }}</p>
-            @else
-                @foreach( $tickets as $ticket)
-                <div class="row col-md-12">
-                    <div class="col-md-4">
-                        <img class="img-fluid p-1" src="{{asset('client/img/logo-hcn.png')}}" style="width: 180px;">
-                    </div>
-                    <div class="col-md-8 text-end">
-                        <h3 class="">BeeCar</h3>
-                    </div>
-                </div>
+                @if (isset($error))
+                    <p class="text-center text-danger">{{ $error }}</p>
+                @else
+                    @php
+                        $totalPrepayment = $tickets->sum('pre_payment');
+                        $totalTickets = $tickets->count();
+                    @endphp
+                    @foreach($tickets as $ticket)
+                        <div class="row col-md-12 mb-3">
+                            <div class="col-md-4">
+                                <img class="img-fluid p-1" src="{{ asset('client/img/logo-hcn.png') }}" style="width: 180px;">
+                            </div>
+                            <div class="col-md-8 text-end">
+                                <h3 class="">BeeCar</h3>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h3 class="card-text text-center">Vé xe khách</h3>
                             <p class="text-start ps-2">Mã vé xe: 0{{ $ticket->name }}</p>
@@ -80,7 +84,7 @@
                                         </tr>
                                         <tr>
                                             <td>Số xe:</td>
-                                            <td>{{ $ticket->license_plates  }}</td>
+                                            <td>{{ $ticket->license_plates }}</td>
                                         </tr>
                                         <tr>
                                             <td>Thời gian khởi hành:</td>
@@ -90,17 +94,16 @@
                                     </table>
                                 </div>
                             </div>
-                            <h5 class="text-center text-danger">Giá tiền: {{ number_format($ticket->pre_payment) }}
-                                đ/lượt</h5>
+                            @php
+                                $ticketPrice = number_format($ticket->pre_payment / $totalTickets, 0, ',', '.');
+                            @endphp
+                            <h5 class="text-center text-danger">Giá tiền: {{ $ticketPrice }} đ/lượt</h5>
                         </div>
                     @endforeach
                 @endif
             </div>
         </div>
-
-
     </div>
-
 
     <!-- Form End -->
 @endsection

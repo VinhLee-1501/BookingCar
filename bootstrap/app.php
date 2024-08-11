@@ -33,6 +33,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 'pay.php',
                 'ridefilter.php',
                 'profile.php',
+                'ticket.php'
 
             ];
 

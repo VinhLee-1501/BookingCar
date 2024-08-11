@@ -62,7 +62,7 @@
                                 <div class="flex  border-b p-4 ">
                                     <div class="row d-flex">
                                         <div class="col-md-7">
-                                            <span class=" text-lg font-medium">{{ $tiketHome->name }}</span>
+                                            <span class=" font-medium">{{ $tiketHome->name }}</span>
                                         </div>
                                         <div class="col-md-5">
                                             <span class="ms-5 text-danger">{{ $tiketHome->price }}.000<!-- -->đ</span>

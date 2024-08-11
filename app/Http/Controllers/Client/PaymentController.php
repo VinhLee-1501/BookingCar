@@ -81,7 +81,7 @@ class PaymentController extends Controller
         $orderInfo = "Thanh toán qua MoMo";
         $amount = $data['totalPrice'] * 1000;
         $orderId = time() . "";
-        $redirectUrl = "http://127.0.0.1:8000/user/";
+        $redirectUrl = "http://127.0.0.1:8000/user/ticket";
         $ipnUrl = "http://127.0.0.1:8000/user/pay";
         $extraData = $request->input('the_ride_id');
         $requestId = time() . "";

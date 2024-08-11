@@ -12,7 +12,6 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Client\LoginController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Client\LoginController;
 
 use Laravel\Socialite\Facades\Socialite;
 
