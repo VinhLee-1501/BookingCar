@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
@@ -14,6 +15,17 @@ class UserController extends Controller
         return view('admin.user.index', compact('users'));
     }
 
+    public function search(Request $request)
+    {
+        $query = $request->input('search');
+        $users = User::when($query, function ($queryBuilder) use ($query) {
+            return $queryBuilder->where('phone', 'like', "%{$query}%")
+                ->orWhere('cccd', 'like', "%{$query}%");
+        })->get();
+        $html = view('admin.user.search', compact('users'))->render();
+        return response()->json(['html' => $html]);
+    }
+
     public function create()
     {
         return view('admin.user.create');
@@ -21,7 +33,7 @@ class UserController extends Controller
 
     public function store(UserRequest $request)
     {
-        User::create($request->all());
+        User::create($request->validated());
         return redirect()->back()->with('success', 'Thêm mới khách hàng thành công');
     }
 

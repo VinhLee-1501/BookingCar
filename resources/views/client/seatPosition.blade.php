@@ -1,4 +1,3 @@
-@php use Carbon\Carbon; @endphp
 @extends('layouts.client.app')
 @section('content')
     <div class="bg-light p-3">

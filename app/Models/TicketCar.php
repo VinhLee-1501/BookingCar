@@ -25,8 +25,7 @@ class TicketCar extends Model
     {
         return $this->belongsTo(TicketBookingCar::class, 'ticket_booking_id');
     }
-
-    public function seat()
+    public function seatPosition()
     {
         return $this->belongsTo(SeatPosition::class, 'seat_ld');
     }

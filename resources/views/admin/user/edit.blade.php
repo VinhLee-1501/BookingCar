@@ -17,17 +17,17 @@
                         <div class="col-lg-6">
                             <label for="name" class="form-label">Tên khách hàng</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                   value="{{ old('name', $user->name) }}">
+                                value="{{ old('name', $user->name) }}">
                             @error('name')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-lg-6">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" id="email" class="form-control"
-                                   value="{{ old('email', $user->email) }}">
+                                value="{{ old('email', $user->email) }}">
                             @error('email')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -36,17 +36,17 @@
                         <div class="col-lg-6">
                             <label for="phone" class="form-label">Số điện thoại</label>
                             <input type="text" name="phone" id="phone" class="form-control"
-                                   value="{{ old('phone', $user->phone) }}">
+                                value="{{ old('phone', $user->phone) }}">
                             @error('phone')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-lg-6">
                             <label for="address" class="form-label">Địa chỉ</label>
                             <input type="text" name="address" id="address" class="form-control"
-                                   value="{{ old('address', $user->address) }}">
+                                value="{{ old('address', $user->address) }}">
                             @error('address')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -55,9 +55,9 @@
                         <div class="col-lg-6">
                             <label for="cccd" class="form-label">Số CCCD</label>
                             <input type="text" name="cccd" id="cccd" class="form-control"
-                                   value="{{ old('cccd', $user->cccd) }}">
+                                value="{{ old('cccd', $user->cccd) }}">
                             @error('cccd')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -65,9 +65,9 @@
                         <div class="col-lg-6">
                             <label for="birthday" class="form-label">Ngày sinh</label>
                             <input type="date" name="birthday" id="birthday" class="form-control"
-                                   value="{{ old('birthday', $user->birthday) }}">
+                                value="{{ old('birthday', $user->birthday) }}">
                             @error('birthday')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-lg-6">
@@ -79,7 +79,7 @@
                                 </option>
                             </select>
                             @error('gender')
-                            <span class="text-danger mt-2">{{ $message }}</span>
+                                <span class="text-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
