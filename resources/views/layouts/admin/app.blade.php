@@ -8,6 +8,8 @@
     <link rel="shortcut icon" type="image/png" href="{{ asset('admin/images/logos/favicon.png') }}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
     <link rel="stylesheet" href="{{ asset('admin/css/styles.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('admin/css/PT.css') }}">
+
 </head>
 
 <body>

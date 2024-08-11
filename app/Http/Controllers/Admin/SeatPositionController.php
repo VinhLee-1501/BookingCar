@@ -3,18 +3,28 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SeatPositionRequest\SeatPositionRequest;
+use App\Http\Requests\Admin\SeatPositionRequest\SeatPositionRequest;
 use App\Models\Car;
 use App\Models\SeatPosition;
-
+use Illuminate\Http\Request;
 class SeatPositionController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $seat = SeatPosition::all();
-        return view('admin.Seat_positions.index', compact('seat'));
-    }
+        $query = SeatPosition::join('cars', 'seat_positions.cars_id', '=', 'cars.id')
+            ->select('seat_positions.id', 'seat_positions.name', 'seat_positions.price', 'seat_positions.status', 'cars.license_plates as car_license_plates');
 
+        if ($request->has('car_id') && $request->car_id) {
+            $query->where('cars.id', $request->car_id);
+        }
+        if ($request->has('seat_name') && $request->seat_name) {
+            $query->where('seat_positions.name', 'like', '%' . $request->seat_name . '%');
+        }
+        $seat = $query->orderBy('seat_positions.id', 'desc')->paginate(5);
+        $cars = Car::all();
+        $seatNames = SeatPosition::select('name')->distinct()->get();
+        return view('admin.Seat_positions.index', compact('seat', 'cars', 'seatNames'));
+    }
     public function create()
     {
         $cars = Car::all();
