@@ -45,7 +45,7 @@
                             <select class="form-select" id="nameCars" name="cars_id">
                                 @foreach($cars as $row)
                                     <option
-                                        value="{{ $row->id }}" {{ old('nameCars') == $row->id ? 'selected' : '' }}>{{ $row->license_plates}}</option>
+                                        value="{{ $row->id }}" {{ old('cars_id') == $row->id ? 'selected' : '' }}>{{ $row->license_plates}}</option>
                                 @endforeach
                             </select>
                             @error('nameCars')

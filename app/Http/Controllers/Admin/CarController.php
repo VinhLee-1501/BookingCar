@@ -12,12 +12,21 @@ class CarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $cars = Car::join('categories', 'cars.category_id', '=', 'categories.id')
+        $categories = Category::select('id', 'name')->get();
+        $licensePlates = Car::select('license_plates')->distinct()->get();
+        $query = Car::join('categories', 'cars.category_id', '=', 'categories.id')
             ->select('cars.id', 'cars.name', 'cars.license_plates', 'categories.name as category_name')
-            ->get();
-        return view('admin.cars.index', compact('cars'));
+            ->orderBy('cars.id', 'desc');
+        if ($request->has('category_id') && $request->category_id) {
+            $query->where('cars.category_id', $request->category_id);
+        }
+        if ($request->has('license_plates') && $request->license_plates) {
+            $query->where('cars.license_plates', $request->license_plates);
+        }
+        $cars = $query->paginate(5);
+        return view('admin.cars.index', compact('cars', 'categories', 'licensePlates'));
     }
 
     /**

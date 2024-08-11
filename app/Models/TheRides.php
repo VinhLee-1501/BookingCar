@@ -10,15 +10,15 @@ class TheRides extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'time_to_go',
-        'estimated_arrival_time',
-        'estimated_departure_time',
-        'price',
-        'carriage_way_id',
-        'car_id',
-        'start_location',
-        'end_location',
+            'name',
+            'time_to_go',
+            'estimated_arrival_time',
+            'estimated_departure_time',
+            'price',
+            'carriage_way_id',
+            'car_id',
+            'start_location',
+            'end_location',
     ];
 
 

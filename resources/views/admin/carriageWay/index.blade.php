@@ -5,7 +5,7 @@
         <h5 class="card-title fw-semibold mb-4">Danh mục</h5>
         <div class="card">
             <div class="card-body">
-                <a href="{{route('dashboard.addCarriageway')}}" class="btn btn-success">Thêm +</a>
+{{--                <a href="{{route('dashboard.addCarriageway')}}" class="btn btn-success">Thêm +</a>--}}
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -15,53 +15,23 @@
                         <th scope="col">Tuyến ngày</th>
                         <th scope="col">Thời gian TB</th>
                         <th scope="col">Quản đường</th>
-                        <th scope="col">Trạm xe</th>
-                        <th scope="col">Thao tác</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cần Thơ - Vĩnh Long</td>
-                        <td>20 tuyến</td>
-                        <td>4 tuyến / ngày</td>
-                        <td>2 giờ</td>
-                        <td>40km</td>
-                        <td>Bến xe TTTP-CT</td>
-                        <td>
-                            <a href="" class="btn btn-primary btn-sm">Sửa</a>
-                            <button type="button" class="btn btn-danger btn-sm">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cần Thơ - TP Hồ Chí Minh</td>
-                        <td>23 tuyến</td>
-                        <td>4 tuyến / ngày</td>
-                        <td>3 giờ</td>
-                        <td>150km</td>
-                        <td>Bến xe TTTP-CT</td>
-                        <td>
-                            <a href="" class="btn btn-primary btn-sm">Sửa</a>
-                            <button type="button" class="btn btn-danger btn-sm">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cần Thơ - Gò Công</td>
-                        <td>20 tuyến</td>
-                        <td>4 tuyến / ngày</td>
-                        <td>2 giờ 42 phút</td>
-                        <td>145km</td>
-                        <td>Bến xe TTTP-CT</td>
-                        <td>
-                            <a href="" class="btn btn-primary btn-sm">Sửa</a>
-                            <button type="button" class="btn btn-danger btn-sm">Xóa</button>
-                        </td>
-                    </tr>
+                    @foreach($carriageWays as $carriageWay)
+                        <tr>
+                            <th scope="row" >{{ $carriageWay->carriage_way_id }}</th>
+                            <td>{{ $carriageWay->carriage_way_name }}</td>
+                            <td>{{ $carriageWay->trips_this_week }} tuyến</td>
+                            <td>{{ $carriageWay->trips_today }} tuyến / ngày</td>
+                            <td>{{ $carriageWay->average_travel_time }} giờ</td>
+                            <td>{{ $carriageWay->distance}}Km</td>
+                            <td> <a class="btn btn-primary btn-sm me-2">Chi tiết</a></td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
-                <a href="{{route('dashboard.addCarriageway')}}" class="btn btn-success">Thêm +</a>
             </div>
         </div>
     </div>

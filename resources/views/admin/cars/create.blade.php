@@ -15,9 +15,6 @@
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Tên xe</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" name="name">
-                        {{--                        @error('name')--}}
-                        {{--                        <span class="text-danger">{{$messages}}</span>--}}
-                        {{--                        @enderror--}}
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Số xe</label>

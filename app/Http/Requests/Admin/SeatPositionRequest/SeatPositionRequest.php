@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\SeatPositionRequest;
+namespace App\Http\Requests\Admin\SeatPositionRequest;
 
 use Illuminate\Foundation\Http\FormRequest;
 

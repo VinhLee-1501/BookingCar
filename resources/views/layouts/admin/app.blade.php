@@ -7,10 +7,10 @@
     <meta name="search-ticket" content="{{ route('dashboard.searchTicket') }}">
     <meta name="search-user" content="{{ route('dashboard.searchUser') }}">
     <title>@yield('meta_title', 'BeeCar')</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('admin/images/logos/favicon.png') }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-    <link rel="stylesheet" href="{{ asset('admin/css/styles.min.css') }}" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('admin/images/logos/favicon.png') }}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+    <link rel="stylesheet" href="{{ asset('admin/css/styles.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('admin/css/PT.css') }}">
 
 </head>
 
