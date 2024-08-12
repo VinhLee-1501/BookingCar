@@ -70,7 +70,7 @@
                                     </div>
                                     <span class="text-gray text-[15px]">{{ $tiketHome->distance }}km -
                                         {{ $tiketHome->time }}
-                                        giờ - {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('d/m/Y') }}</span>
+                                        giờ - {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('H:i') }} {{ Carbon\Carbon::parse($tiketHome->timeStart)->format('d/m/Y') }}</span>
 
                                 </div>
                             </a>
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                     <span class="text-gray text-[15px]">{{ $ticket->distance }}km - {{ $ticket->time }}
-                                        giờ - {{ Carbon\Carbon::parse($ticket->timeStart)->format('d/m/Y') }}</span>
+                                        giờ - {{ Carbon\Carbon::parse($ticket->timeStart)->format('H:i') }} {{ Carbon\Carbon::parse($ticket->timeStart)->format('d/m/Y') }}</span>
                                 </div>
                             </a>
                         @endforeach
@@ -121,6 +121,7 @@
                                     </div>
                                     <span class="text-gray text-[15px]">{{ $ticket->distance }}km -
                                         {{ $ticket->time }} giờ -
+                                        {{ Carbon\Carbon::parse($ticket->timeStart)->format('H:i') }}
                                         {{ Carbon\Carbon::parse($ticket->timeStart)->format('d/m/Y') }}</span>
                                 </div>
                             </a>
@@ -194,7 +195,7 @@
                     <a href="{{ route('user.news') }}">
                         <div class="team-item rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset('client/img/team-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="https://cdn.futabus.vn/futa-busline-web-cms-prod/599_x_337_x3_ca4cf9ab9a/599_x_337_x3_ca4cf9ab9a.png" alt="">
 
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -210,7 +211,7 @@
                     <a href="{{ route('user.news') }}">
                         <div class="team-item rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset('client/img/team-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="https://cdn.futabus.vn/futa-busline-web-cms-prod/Artboard_2_4x_1_11eaaecc61/Artboard_2_4x_1_11eaaecc61.png" alt="">
 
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -226,7 +227,7 @@
                     <a href="{{ route('user.news') }}">
                         <div class="team-item rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset('client/img/team-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="https://cdn.futabus.vn/futa-busline-web-cms-prod/5_599_x_337_px_60778e9eca/5_599_x_337_px_60778e9eca.png" alt="">
 
                             </div>
                             <div class="text-center p-4 mt-3">

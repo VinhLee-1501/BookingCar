@@ -1,5 +1,5 @@
 @php use Carbon\Carbon; @endphp
-@extends('layouts.client.app')
+@extends('layouts.client.master')
 
 @section('content')
     <!-- Form Start -->

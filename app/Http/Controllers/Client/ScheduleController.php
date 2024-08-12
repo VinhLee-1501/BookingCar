@@ -17,6 +17,7 @@ class ScheduleController extends Controller
             ->join('categories', 'categories.id', '=', 'cars.category_id')
             ->select('carriage_ways.distance', 'carriage_ways.id as id', 'carriage_ways.average_travel_time',
                 'carriage_ways.name', 'the_rides.price', 'categories.name as category_name')
+               
             ->get();
 
         // dd($scheduleData);

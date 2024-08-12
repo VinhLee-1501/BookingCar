@@ -51,8 +51,9 @@ class PaymentController extends Controller
             return redirect()->back()->with('error', 'Có lỗi khi xử lý chỗ ngồi đã chọn!');
         }
 
-//        dd($data);
+
         $infoUser = User::where('email', $data['email'])->first();
+        // dd($infoUser);
         $theRide = TheRides::join('carriage_ways', 'carriage_ways.id', '=', 'the_rides.carriage_way_id')
             ->join('stations as start_station', 'carriage_ways.car_station_to', '=', 'start_station.id')
             ->join('stations as end_station', 'carriage_ways.car_station_from', '=', 'end_station.id')

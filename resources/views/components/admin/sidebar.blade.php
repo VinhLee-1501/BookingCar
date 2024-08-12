@@ -29,7 +29,7 @@
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                     <span class="hide-menu">Chức năng</span>
                 </li>
-                <li class="sidebar-item">
+                {{-- <li class="sidebar-item">
                     <a class="sidebar-link {{ request()->routeIs('dashboard.categories.index') ? 'active' : '' }}"
                        href="{{ route('dashboard.categories.index')}}" aria-expanded="false">
                 <span>
@@ -37,7 +37,7 @@
                 </span>
                         <span class="hide-menu">Danh mục</span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="sidebar-item">
                     <a class="sidebar-link {{ request()->routeIs('dashboard.car.index') ? 'active' : '' }}"
                        href="{{ route('dashboard.car.index')}}" aria-expanded="false">

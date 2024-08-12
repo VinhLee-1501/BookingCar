@@ -29,7 +29,7 @@ class TheRideController extends Controller
         if ($request->has('time_to_go') && $request->time_to_go) {
             $query->whereDate('the_rides.time_to_go', $request->time_to_go);
         }
-        $Therides = $query->orderBy('the_rides.id', 'desc')->paginate(3);
+        $Therides = $query->orderBy('the_rides.id', 'desc')->paginate(5);
 
         return view('admin.theRides.index', compact('Therides'));
     }

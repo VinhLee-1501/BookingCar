@@ -3,8 +3,7 @@
 @section('content')
     <div class="container">
         <h5 class="card-title fw-semibold mb-4">Chi tiết vé xe</h5>
-        <button id="export-btn" class="btn btn-primary">Xuất Hình Ảnh</button>
-
+            <button id="export-btn" class="btn btn-primary">Xuất Hình Ảnh</button>
         <div class="exportImg card mx-auto shadow p-3 mb-5 bg-body roundedt" style="max-width: 500px;">
             <div class="card-body ">
                 <div class="text-center">

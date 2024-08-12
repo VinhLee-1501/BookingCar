@@ -44,7 +44,7 @@
                         <th scope="col">Tên Ghế</th>
                         <th scope="col">Giá</th>
                         <th scope="col">Trạng Thái</th>
-                        <th scope="col">Tên Xe</th>
+                        <th scope="col">Biển Số Xe</th>
                         <th scope="col">Thao tác</th>
                     </tr>
                     </thead>
@@ -55,7 +55,7 @@
                             <td>{{ $row->name }}</td>
                             <td>{{ $row->price }}.000</td>
                             <td>
-                                {{ $row->status == 1 ? 'Đã đặt' : 'Chưa đặt' }}
+                                {{ $row->status == 0 ? 'Đã đặt' : 'Chưa đặt' }}
                             </td>
                             <td>{{ $row->car_license_plates }}</td>
                             <td class="d-flex">

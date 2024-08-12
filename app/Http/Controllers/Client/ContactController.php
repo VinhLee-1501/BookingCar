@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Mail\ExampleMail;
 use App\Models\TheRides;
+use App\Models\CarriageWay;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -16,7 +17,7 @@ class ContactController extends Controller
     public function showForm()
     {
         // Lấy tất cả các chuyến đi và người dùng hiện tại
-        $trips = TheRides::all();
+        $trips = CarriageWay::all();
         $user = Auth::user();
 
         // Truyền dữ liệu đến view
@@ -57,6 +58,6 @@ class ContactController extends Controller
 
         // Trở lại trang trước với thông báo thành công
         return back()->with('success', 'Thông tin đã được gửi thành công.');
-        
+
     }
 }

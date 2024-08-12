@@ -19,11 +19,11 @@
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <input type="date" class="form-control border-0 py-3" placeholder="Chọn ngày đi"
+                            <input type="date" class="form-control border-0 " placeholder="Chọn ngày đi"
                                    name="departureDate">
                         </div>
                         <div class="col-md-3">
-                            <button class="btn btn-secondary border-0 w-100 py-3">Tìm chuyến xe</button>
+                            <button class="btn btn-secondary border-0 w-100 ">Tìm chuyến xe</button>
                         </div>
                     </div>
                 </form>

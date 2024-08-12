@@ -46,12 +46,12 @@
                     <div class="card-body">
                         <h5>Lịch sử đặt xe</h5>
                         <ul class="list-unstyled">
-                            @foreach($users['userTickets'] as $users)
+                            @foreach($users['userTickets'] as $ticket)
                             <li class="media">
                                 <div class="media-body">
-                                    <h6 class="mt-0 mb-1">{{$users->ride_name}}</h6>
-                                    Mã vé: {{$users->ticket_car_name}} - Ngày đặt: {{ Carbon\Carbon::parse($users->time)->format('d/m/Y') }} - Trạng thái:
-                                    @if($users->user_role == '0')
+                                    <h6 class="mt-0 mb-1">{{$ticket->ride_name}}</h6>
+                                    Mã vé: {{$ticket->ticket_car_name}} - Ngày đặt: {{ Carbon\Carbon::parse($ticket->ticket_created_at)->format('d/m/Y H:i') }} - Trạng thái:
+                                    @if($ticket->user_role == '0')
 
                                        Đã thanh toán
                                     @else

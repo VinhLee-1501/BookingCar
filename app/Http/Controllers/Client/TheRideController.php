@@ -38,7 +38,7 @@ class TheRideController extends Controller
         foreach ($theRide as $ride) {
             $departureTime = Carbon::parse($ride->estimated_departure_time);
             $arrivalTime = Carbon::parse($ride->estimated_arrival_time);
-            $travelTimeInMinutes = $arrivalTime->diffInMinutes($departureTime);
+            $travelTimeInMinutes = abs($arrivalTime->diffInMinutes($departureTime));
 
             $hours = intdiv($travelTimeInMinutes, 60);
 

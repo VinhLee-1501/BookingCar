@@ -28,9 +28,10 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         @foreach ($users as $row)
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">{{ $row->id }}</th>
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->email }}</td>
                                 <td>{{ $row->phone }}</td>
@@ -44,8 +45,6 @@
                                         onsubmit="return confirm('Are you sure you want to delete this item?');">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ route('dashboard.editUser', $row->id) }}"
-                                            class="btn btn-primary btn-sm me-2">Sửa</a>
                                         <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
                                     </form>
                                 </td>

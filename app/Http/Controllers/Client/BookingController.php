@@ -21,6 +21,8 @@ class BookingController extends Controller
         $selectedSeats = $request->input('selectedSeats'); // Array of seat IDs
         $totalPrice = $request->input('totalPrice');
 
+        dd($selectedSeats);
+
         $ticketBooking = TicketBookingCar::create([
             'user_id' => $user->id,
             'prepayment' => $totalPrice,
